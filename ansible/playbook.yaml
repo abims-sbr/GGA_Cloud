@@ -1,0 +1,9 @@
+- hosts: localhost
+  connection: local
+  become: yes
+  become_user: root
+  vars:
+    terraform_version: 0.12.24
+    terraform_bin_path: /usr/local/bin/
+  roles:
+    - role: darkwizard242.terraform
