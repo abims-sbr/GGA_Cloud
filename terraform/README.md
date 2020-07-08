@@ -1,4 +1,4 @@
-### TERRAFORM
+# TERRAFORM
 
 https://www.jesuisundev.com/comprendre-terraform-en-5-minutes/
 
@@ -21,7 +21,7 @@ Terraform opte pour l’approche dite “push”. Il va prendre l’état décla
 Terraform n’est pas limité à un provider (Amazon WS) ou au Cloud de façon générale. Presque tous les types d’infrastructure peuvent être représentés comme une ressource dans Terraform. Des containers docker sur une machine en local à un compte cloud sur DigitalOcean.
 
 
-# BLOCS
+### BLOCS
 
 - provider.tf
 
@@ -68,7 +68,7 @@ https://upcloud.com/community/tutorials/terraform-variables/
 
 La majorité des configurations sont récupérables sur le cloud Genouest dans ce cas ci. 
 
-# Provider
+### Provider
 
 Les configurations du provider peuvent être obtenues en se connectant au compte de l'utilisateur sur lequel on souhaite installer une instance, puis dans le panneau "user" dans le coin supérieur droit, en téléchargeant le "Fichier OpenStack RC v3".
 
@@ -81,7 +81,7 @@ Les configurations du provider peuvent être obtenues en se connectant au compte
 - password : Le mot de passe de l'utilisateur avec lequel se connecter
 
 
-# Resource
+### Resource
 
 Les configurations des ressources se trouve en se connectant au compte utilisateur dans : 
 	- "Projet -> Compute -> Images" pour le nom de l'image souhaitée
