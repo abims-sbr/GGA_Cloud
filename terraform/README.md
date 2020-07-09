@@ -38,11 +38,12 @@ https://www.terraform.io/docs/configuration/resources.html
 - variables.tf
 
 La bloc variable défini l'ensemble des variables utilisées. Il est divisé en 2 types :
-- Inputs
+
+1. Inputs
 
 Les inputs sont utilisés pour définir des valeurs qui configurent l'infrastructure. Ces valeurs peuvent être utilisées à plusieurs reprises sans avoir à se souvenir de chacune de leurs occurrences au cas où elles auraient besoin d'être mises à jour.
 
-- Outputs
+2. Outputs
 
 Les outputs, en revanche, sont utilisés pour obtenir des informations sur l'infrastructure après le déploiement. Celles-ci peuvent être utiles pour transmettre des informations telles que les adresses IP pour la connexion au serveur.
 
@@ -84,9 +85,9 @@ Les configurations du provider peuvent être obtenues en se connectant au compte
 ### Resource
 
 Les configurations des ressources se trouve en se connectant au compte utilisateur dans : 
-	- "Projet -> Compute -> Images" pour le nom de l'image souhaitée
-	- "Projet -> Compute -> Instance -> Lancer une instance -> Gabarit" pour la liste des gabarits disponible
-	- "Projet -> Réseau -> Réseaux" pour le nom du réseau.
+"Projet -> Compute -> Images" pour le nom de l'image souhaitée
+"Projet -> Compute -> Instance -> Lancer une instance -> Gabarit" pour la liste des gabarits disponible
+"Projet -> Réseau -> Réseaux" pour le nom du réseau.
 
 - name : Nom de l'instance
 - image_name : Nom de l'image à installer
