@@ -1,4 +1,4 @@
-log.txt
-.terraform/
-terraform.tfstate
-terraform.tfstate.backup
+terraform/log.txt
+terraform/.terraform/
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
