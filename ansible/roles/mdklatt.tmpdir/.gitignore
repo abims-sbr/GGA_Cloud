@@ -1,0 +1,28 @@
+# Ignore virtualenv environments.
+
+.venv*/
+
+
+# Ignore pyenv files.
+
+.python-version
+
+
+# Ignore Vagrant runtime files.
+
+.vagrant/
+
+
+# Ignore settings for various IDEs.
+
+.idea/
+.project/
+.pydevproject/
+nbproject/
+*.code-workspace
+.vscode/
+
+# Ignore OS metadata files.
+
+.DS_Store
+Thumbs.db

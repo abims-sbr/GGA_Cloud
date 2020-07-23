@@ -1,0 +1,12 @@
+---
+- name: tmpdir remove
+  become: "{{ tmpdir_force }}"
+  file:
+    path: "{{ tmpdir_path }}"
+    state: absent
+  notify:
+    - tmpdir unset
+
+- name: tmpdir unset
+  set_fact:
+    tmpdir_path: null

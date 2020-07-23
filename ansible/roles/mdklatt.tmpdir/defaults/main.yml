@@ -1,0 +1,5 @@
+---
+tmpdir_root: "{{ ansible_env.TMPDIR|default('/tmp') }}"
+tmpdir_template: tmp.XXXXXXXX
+tmpdir_path: /tmp/  # set at runtime
+tmpdir_force: false  # force removal as root
