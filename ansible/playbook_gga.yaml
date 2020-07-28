@@ -11,7 +11,5 @@
   tasks:
   - name: Installing python libraries
     pip:
-      name: 
-        - pandas
-        - pyyaml
-        - bioblend>=0.13
+      chdir: "~/Projets/GGA_Cloud/ansible/gga_load_data/"
+      requirements: requirements.txt
