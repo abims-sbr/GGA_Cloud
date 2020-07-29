@@ -1,0 +1,10 @@
+# TODO : Make this work
+#- name: Clone GGA repository
+#  git:
+#    repo: "{{ repo_name }}"
+#    dest: "{{ repo_folder }}"
+#    update: yes
+
+#- name: Install dependencies
+
+#- name: Run gga_load_data script

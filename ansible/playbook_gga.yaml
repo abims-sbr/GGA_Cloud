@@ -2,22 +2,11 @@
   connection: local
   become: yes
   become_user: root
-  vars:
-    docker_edition: "ce"
-    docker_version: "19.03"
-    repo_folder: ./ansible/
-    repo_name: git@gitlab.sb-roscoff.fr:abims/e-infra/gga_load_data.git
   roles:
-    - nickjj.docker
-    - mdklatt.python3
+    - cluster_software
     - geerlingguy.git
+    - geerlingguy.docker    
   tasks:
-  # TODO : Make this work
-  - name: Clone GGA repository
-    git:
-      repo: "{{ repo_name }}"
-      dest: "{{ repo_folder }}"
-      update: yes    
   - name: Installing python libraries
     pip:
       requirements: /home/fr2424/sib/rdallet/Projets/GGA_Cloud/ansible/gga_load_data/requirements.txt

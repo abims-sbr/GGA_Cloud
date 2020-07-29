@@ -1,0 +1,5 @@
+---
+
+repo_folder: ./ansible/
+
+repo_name: git@gitlab.sb-roscoff.fr:abims/e-infra/gga_load_data.git
