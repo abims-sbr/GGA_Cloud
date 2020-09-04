@@ -5,6 +5,8 @@
 #    dest: "{{ repo_folder }}"
 #    update: yes
 
-#- name: Install dependencies
+#- name: Installing python libraries
+#  pip:
+#    requirements: /home/fr2424/sib/rdallet/Projets/GGA_Cloud/ansible/gga_load_data/requirements.txt
 
 #- name: Run gga_load_data script

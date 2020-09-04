@@ -1,0 +1,7 @@
+- hosts: genocloud_vms
+  become: yes
+  roles:
+    - cluster_software
+    - geerlingguy.git
+    - geerlingguy.docker    
+    - gga
