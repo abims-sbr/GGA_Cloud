@@ -1,8 +1,12 @@
 # TODO : Make this work
-#- name: Clone GGA repository
-#  git:
-#    repo: "{{ repo_name }}"
-#    dest: "{{ repo_folder }}"
+- name: Clone GGA repository
+  git:
+    repo: "{{ repo_name }}"
+    dest: "{{ repo_folder }}"
+    version: dev
+    accept_hostkey: yes
+    force: yes
+    recursive: no
 #    update: yes
 
 #- name: Installing python libraries

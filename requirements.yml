@@ -1,0 +1,8 @@
+- src: darkwizard242.terraform
+  version: 1.2.8
+
+- src: geerlingguy.git
+  version: 3.0.0
+
+- src: geerlingguy.docker
+  version: 2.9.0

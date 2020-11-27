@@ -52,17 +52,17 @@ https://upcloud.com/community/tutorials/terraform-variables/
 
 ## INSTALLATION (Linux)
 
-- Télécharger le package approprié : https://www.terraform.io/downloads.html
+- Ajouter la clé GPG HashiCorp :
 
-	`wget https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip`
+        `curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -`
 
-- Dézipper le package
+- Ajouter le répertoire Linux officiel HashiCorp :
 
-	`unzip terraform_0.12.24_linux_amd64.zip`
+        `sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"`
 
-- Déplacer le binaire dans le PATH
+- Mettre à jour et installer terraform :
 
-	`mv terraform /usr/local/bin`
+	`sudo apt-get update && sudo apt-get install terraform`
 
 
 ## CONFIGURATIONS
@@ -105,7 +105,7 @@ Les configurations des ressources se trouve en se connectant au compte utilisate
 
 	`terraform validate`
 
-- Génère et affiche le plan d'éxecution
+- Génèrer et afficher le plan d'éxecution
 
 	`terraform plan`
 	
