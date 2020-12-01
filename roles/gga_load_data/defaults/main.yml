@@ -2,4 +2,4 @@
 
 repo_folder: ./files
 
-repo_name: git@gitlab.sb-roscoff.fr:abims/e-infra/gga_load_data.git
+repo_name: http://gitlab.sb-roscoff.fr/abims/e-infra/gga_load_data.git

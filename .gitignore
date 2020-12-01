@@ -1,4 +1,7 @@
-terraform/log.txt
-terraform/.terraform/
-terraform/terraform.tfstate
-terraform/terraform.tfstate.backup
+roles/gga_terraform/log.txt
+roles/gga_terraform/.terraform/
+roles/gga_terraform/terraform.tfstate
+roles/gga_terraform/terraform.tfstate.backup
+roles/geerlingguy.git
+roles/geerlingguy.docker
+roles/darkwizard242.terraform
