@@ -3,7 +3,7 @@
   git:
     repo: "{{ repo_name }}"
     dest: "{{ repo_folder }}"
-    version: dev
+    version: "{{ gga_load_data_version }}"
     accept_hostkey: yes
     force: yes
     recursive: no

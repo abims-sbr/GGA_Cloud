@@ -1,8 +1,8 @@
 [localhost]
 127.0.0.1
 
-[genocloud]
+[os_cloud]
 openstack.genouest.org
 
-[genocloud_vms]
+[os_vms]
 192.168.100.124
