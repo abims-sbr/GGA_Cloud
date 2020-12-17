@@ -1,7 +1,6 @@
 - hosts: localhost
   connection: local
-  become: yes
-  become_user: root
+  become: true
   roles:
     - cluster_software
     - gga_load_data

@@ -9,8 +9,16 @@
     recursive: no
 #    update: yes
 
-#- name: Installing python libraries
-#  pip:
-#    requirements: /home/fr2424/sib/rdallet/Projets/GGA_Cloud/ansible/gga_load_data/requirements.txt
+- name: Installing python libraries
+  pip:
+    requirements: /opt/gga_load_data/requirements.txt
 
-#- name: Run gga_load_data script
+- name: Run gga_init script
+  script: gga_init.py
+  args:
+    chdir: /opt/gga_load_data
+
+- name: Run gga_load_data script
+  script: gga_load_data.py
+  args:
+    chdir: /opt/gga_load_data

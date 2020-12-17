@@ -4,5 +4,4 @@
     - geerlingguy.git
     - role: geerlingguy.docker
       become: true
-      become_user: ubuntu
     - gga_load_data
