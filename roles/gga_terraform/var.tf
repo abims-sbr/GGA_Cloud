@@ -27,6 +27,6 @@ variable "os_password" {
 }
 variable "tenant_network" {    
     description = "The network to be used."    
-    default = "provider"
+    default = "genouest-ext"
 }
 

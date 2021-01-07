@@ -1,4 +1,5 @@
 - hosts: os_vms
+  become: true
   roles:
     - cluster_software
     - geerlingguy.git

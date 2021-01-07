@@ -5,3 +5,4 @@ roles/gga_terraform/terraform.tfstate.backup
 roles/geerlingguy.git
 roles/geerlingguy.docker
 roles/darkwizard242.terraform
+roles/gga_terraform/.terraform.lock.hcl

@@ -5,4 +5,4 @@
 openstack.genouest.org
 
 [os_vms]
-192.168.100.124
+192.168.101.92 ansible_user=debian
