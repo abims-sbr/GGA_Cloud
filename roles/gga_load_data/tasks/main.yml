@@ -1,4 +1,3 @@
-# TODO : Make this work
 - name: Clone GGA repository
   git:
     repo: "{{ repo_name }}"
@@ -11,14 +10,15 @@
 
 - name: Installing python libraries
   pip:
-    requirements: /opt/gga_load_data/requirements.txt
+    executable: pip3
+    requirements: "{{ repo_folder }}/requirements.txt"
 
 - name: Run gga_init script
-  script: gga_init.py
+  script: "{{ gga_init }}"
   args:
-    chdir: /opt/gga_load_data
+    chdir: "{{ repo_folder }}"
 
 - name: Run gga_load_data script
-  script: gga_load_data.py
+  script: "{{ gga_load_data }}"
   args:
-    chdir: /opt/gga_load_data
+    chdir: "{{ repo_folder }}"

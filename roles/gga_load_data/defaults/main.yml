@@ -3,3 +3,7 @@
 repo_folder: /opt/gga_load_data
 
 repo_name: http://gitlab.sb-roscoff.fr/abims/e-infra/gga_load_data.git
+
+gga_init: gga_init.py
+
+gga_load_data: gga_load_data.py

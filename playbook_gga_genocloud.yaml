@@ -4,5 +4,4 @@
     - cluster_software
     - geerlingguy.git
     - role: geerlingguy.docker
-      become: true
     - gga_load_data
