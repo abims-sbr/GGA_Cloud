@@ -1,31 +1,31 @@
 # TERRAFORM
 
-https://www.jesuisundev.com/comprendre-terraform-en-5-minutes/
-
-Tutoriel :
+Tutorial :
 https://learn.hashicorp.com/terraform/getting-started/install
 
 
-## C'EST QUOI ?
+## What is Terraform ?
 
-Terraform est un outil qui permet de déclarer, via notre code, ce que l'on veut pour notre infrastructure. 
-Dans des fichiers de configuration structurés on va pouvoir manager automatiquement notre infrastructure sans action manuelle, que ça soit l’approvisionnement initial, la mise à jour ou la destruction de l'infrastructure.
+Terraform is a tool that allows us to declare, via our code, what we want for our infrastructure. 
 
-Terraform opte pour la façon de faire dite déclarative. On déclare dans les fichiers de configs l’état désiré de l'infrastructure. Terraform ne va faire qu’exécuter le minimum pour arriver à l’état désiré.
+We can automatically manage our infrastructure without manual action throught structured configuration files, whether it is the initial supply, the update or the destruction of the infrastructure.
 
-
-## COMMENT CA MARCHE ?
-
-Terraform opte pour l’approche dite “push”. Il va prendre l’état déclaré dans les fichiers de configuration et pousser les modifications vers le provider de destination.
-
-Terraform n’est pas limité à un provider (Amazon WS) ou au Cloud de façon générale. Presque tous les types d’infrastructure peuvent être représentés comme une ressource dans Terraform. Des containers docker sur une machine en local à un compte cloud sur DigitalOcean.
+Terraform opts for the declarative way. We declare in the configuration files the desired state of the infrastructure and Terraform will only perform minimal execution to achieve the desired state.
 
 
-### BLOCS
+## How does it works ?
+
+
+Terraform opts for the "push" approach. It will take the state declared in the configuration files and push the modifications to the destination provider.
+
+Terraform is not limited to a provider (Amazon WS) or to the Cloud in general. Almost any type of infrastructure can be represented as a resource in Terraform. From docker containers on a local machine to a cloud account on DigitalOcean.
+
+
+### Blocs
 
 - provider.tf
 
-Le bloc provider configure le provider nommé, dans notre cas openstack, qui est responsable de la création et du management des ressources.
+The provider block configures the named provider, in our case openstack, which is responsible for the creation and management of resources.
 
 https://www.terraform.io/docs/providers/index.html
 
@@ -37,90 +37,90 @@ https://www.terraform.io/docs/configuration/resources.html
 
 - variables.tf
 
-La bloc variable défini l'ensemble des variables utilisées. Il est divisé en 2 types :
+The variable block defines all the variables used. It is divided into 2 types:
 
 1. Inputs
 
-Les inputs sont utilisés pour définir des valeurs qui configurent l'infrastructure. Ces valeurs peuvent être utilisées à plusieurs reprises sans avoir à se souvenir de chacune de leurs occurrences au cas où elles auraient besoin d'être mises à jour.
+The inputs are used to define values ​​that configure the infrastructure. These values ​​can be used repeatedly without having to remember each of their occurrences in case they need to be updated.
 
 2. Outputs
 
-Les outputs, en revanche, sont utilisés pour obtenir des informations sur l'infrastructure après le déploiement. Celles-ci peuvent être utiles pour transmettre des informations telles que les adresses IP pour la connexion au serveur.
+On the other hand, the outputs are used to obtain information on the infrastructure after deployment. These can be useful for passing information such as IP addresses for connection to the server.
 
 https://upcloud.com/community/tutorials/terraform-variables/
 
 
-## INSTALLATION (Linux)
+## Installation (Linux)
 
-- Ajouter la clé GPG HashiCorp :
+- Add the GPG HashiCorp key :
 
         `curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -`
 
-- Ajouter le répertoire Linux officiel HashiCorp :
+- Add the official Linux HashiCorp repository :
 
         `sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"`
 
-- Mettre à jour et installer terraform :
+- Update and install terraform :
 
 	`sudo apt-get update && sudo apt-get install terraform`
 
 
-## CONFIGURATIONS
+## Configurations
 
-La majorité des configurations sont récupérables sur le cloud Genouest dans ce cas ci. 
+The majority of configurations can be retrieved from the Genouest cloud in this case.
 
 ### Provider
 
-Les configurations du provider peuvent être obtenues en se connectant au compte de l'utilisateur sur lequel on souhaite installer une instance, puis dans le panneau "user" dans le coin supérieur droit, en téléchargeant le "Fichier OpenStack RC v3".
+The provider's configurations can be obtained by connecting to the account of the user on which you want to install an instance, then in the "user" panel in the upper right corner, downloading the "OpenStack RC v3 file".
 
-- auth_url : URL d'authentification
-- tenant_id : Identifiant du projet (tenant (v2) = projet (v3))
-- tenant_name : Nom du projet
-- user_domain_name : Le nom du domaine dans lequel l'utilisateur se trouve
-- project_domain_id : L'identifiant du domaine dans lequel le projet se trouve
-- user_name : Le nom de l'utilisateur avec lequel se connecter
-- password : Le mot de passe de l'utilisateur avec lequel se connecter
+- auth_url : The authentication URL
+- tenant_id : The project id (tenant (v2) = project (v3))
+- tenant_name : The project name
+- user_domain_name : The user domain name
+- project_domain_id : The project domain id
+- user_name : The user name to connect with
+- password : The user password to connect with
 
 
 ### Resource
 
-Les configurations des ressources se trouve en se connectant au compte utilisateur dans : 
-"Projet -> Compute -> Images" pour le nom de l'image souhaitée
-"Projet -> Compute -> Instance -> Lancer une instance -> Gabarit" pour la liste des gabarits disponible
-"Projet -> Réseau -> Réseaux" pour le nom du réseau.
+Resource configurations can be found by logging into the user account in:
+"Project -> Compute -> Images" for the image name desired.
+"Project -> Compute -> Instance -> Lancer une instance -> Gabarit" for the flavor list available.
+"Project -> Network -> Networks" for the network name.
 
-- name : Nom de l'instance
-- image_name : Nom de l'image à installer
-- flavor_name : Nom du gabarit 
-- network { name } : Nom du réseau
+- name : Instance name
+- image_name : Image name to installed
+- flavor_name : Flavor name
+- network { name } : Network name
 
 
-## COMMANDES
+## Commands
 
-- Initialisation d'un working directory terraform
+- Initialization of a terraform working directory
 
 	`terraform init`
 	
-- Validation des fichiers de configuration
+- Validation of configuration files
 
 	`terraform validate`
 
-- Génèrer et afficher le plan d'éxecution
+- Generate and display the execution plan
 
 	`terraform plan`
 	
-- Application des changements sur l'infrastructure
+- Apply the infrastructure modifications
 
 	`terraform apply`
 	
-- Inspection du status de l'infrastructure
+- Inspect the infrastructure status
 
 	`terraform show`
 	
-- Suppression de l'infrastructure
+- Delete the infrastructure
 
 	`terraform destroy`
 
-- Aide
+- Help
 
 	`terraform help`
