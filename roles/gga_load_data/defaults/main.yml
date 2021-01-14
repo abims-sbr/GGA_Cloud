@@ -1,9 +1,15 @@
 ---
 
-repo_folder: /opt/gga_load_data
-
 repo_name: http://gitlab.sb-roscoff.fr/abims/e-infra/gga_load_data.git
+
+repo_folder: /opt/gga_load_data
 
 gga_init: gga_init.py
 
 gga_load_data: gga_load_data.py
+
+genus_sp: citrus_sinensis
+
+input_sp: files/yml_example_input.yml
+
+config_file: files/config_example.yml

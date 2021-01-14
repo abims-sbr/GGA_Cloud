@@ -13,12 +13,14 @@
     executable: pip3
     requirements: "{{ repo_folder }}/requirements.txt"
 
+# Copy config files into /opt/gga_load_data ?
+
 - name: Run gga_init script
-  script: "{{ gga_init }}"
+  command: "python3 {{ gga_init }} {{ input_sp }} -c {{ config_file }}"
   args:
     chdir: "{{ repo_folder }}"
 
 - name: Run gga_load_data script
-  script: "{{ gga_load_data }}"
+  command: "python3 {{ gga_load_data }} {{ input_sp }} -c {{ config_file }}"
   args:
     chdir: "{{ repo_folder }}"

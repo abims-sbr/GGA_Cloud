@@ -1,0 +1,42 @@
+# Input file for the automated creation GGA docker stacks
+# The file consists in a "list" of species for which the script will have to create these stacks/load data into galaxy/run workflows
+
+citrus_sinensis:  # Dummy value the user gives to designate the species (isn't used by the script)
+  # Species description, leave blank if unknown or you don't want it to be used
+  # These parameters are used to set up the various urls and adresses in different containers
+  # The script requires at least the genus to be specified
+  description:
+    genus: "citrus"  # Mandatory!
+    species: "sinensis"
+    sex: ""
+    strain: ""
+    common_name: ""
+    origin: ""
+  # Data files scalars contain paths to the source files that have to be loaded into galaxy
+  # WARNING: The paths must be absolute paths!
+  # If any path is left blank and the "parent_directory" scalar is specified, this directory and ALL its subdirectories will be
+  # scanned for files corresponding to the description provided for the species (i.e if the user specified
+  # the sex and strain, the script will look for files containing the genus, species, sex and strain of the species)
+  # If no file corresponding to the description is found, this path will be considered empty and the script will
+  # proceed to the next step (create the directory tree for the GGA docker stack)
+  # If a path is left blank and the "parent_directory" scalar is also blank, no file will be loaded for this "path" scalar
+  # If the files are not named using this nomenclature, please provide all the paths in the corresponding scalars below
+  data:
+    # "parent_directory": (optional) directory from where to search files if a "***_path" scalar is empty
+    # NOTE: Try to set a parent directory "close" to the data files so as not to increase runtime
+    # If empty (""), the script will not search for files and no dataset will be loaded for the corresponding scalar
+    #parent_directory: "/path/to/closest/parent/dir"
+    parent_directory: "/opt/gga_load_data/citrus_sinensis"
+    # "***_path": path to the file (optional if parent_directory is set and species "description" scalars are precised)
+    # TODO Not implemented yet
+    genome_path: "/path/to/fasta"
+    transcripts_path: "/path/to/fasta"
+    proteins_path: "/path/to/fasta"
+    gff_path: "/path/to/gff"
+    # If the user has several genomes to upload to galaxy, the next scalar is used by the script to differentiate
+    # between these different versions and name directories according to it.
+    # If left empty, the genome will be considered version "1.0"
+    genome_version: ""
+    # Same as genome version, but for the analysis
+    ogs_version: ""
+    performed_by: ""
