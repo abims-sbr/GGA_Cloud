@@ -1,8 +1,8 @@
-roles/gga_terraform/log.txt
-roles/gga_terraform/.terraform/
-roles/gga_terraform/terraform.tfstate
-roles/gga_terraform/terraform.tfstate.backup
 roles/geerlingguy.git
 roles/geerlingguy.docker
-roles/darkwizard242.terraform
-roles/gga_terraform/.terraform.lock.hcl
+roles/andrewrothstein.terraform/
+roles/gga_terraform/files/.terraform.lock.hcl
+roles/gga_terraform/files/.terraform/
+roles/gga_terraform/files/hosts
+roles/gga_terraform/files/terraform.tfstate
+roles/gga_terraform/files/terraform.tfstate.backup

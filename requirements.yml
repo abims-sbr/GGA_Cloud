@@ -1,5 +1,5 @@
-- src: darkwizard242.terraform
-  version: 1.2.8
+- src: andrewrothstein.terraform
+  version: v2.2.53
 
 - src: geerlingguy.git
   version: 3.0.0

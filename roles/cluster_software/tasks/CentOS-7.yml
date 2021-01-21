@@ -1,7 +1,0 @@
----
-
-- name: Install Centos 7 requirements
-  package:
-    state: present
-    name: "{{ requirements }}"
-  when: cluster_software_base is defined

@@ -4,4 +4,3 @@
   package:
     state: present
     name: "{{ requirements }}"
-#  when: cluster_software_base is defined
