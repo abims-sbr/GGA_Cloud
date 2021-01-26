@@ -24,6 +24,7 @@ variable "os_user_name" {
 }
 variable "os_password" {
     description = "The user password"
+    default = "{{ terraform_password }}"
 }
 variable "tenant_network" {    
     description = "The network to be used."    

@@ -1,6 +1,0 @@
-- hosts: localhost
-  connection: local
-  become: true
-  roles:
-    - cluster_software
-    - gga_load_data

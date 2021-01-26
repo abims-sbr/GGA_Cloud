@@ -1,3 +1,4 @@
+ansible_vault
 roles/geerlingguy.git
 roles/geerlingguy.docker
 roles/andrewrothstein.terraform/
