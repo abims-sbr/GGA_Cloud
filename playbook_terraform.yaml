@@ -2,4 +2,4 @@
   connection: local
   become: true
   roles:
-    - role: darkwizard242.terraform
+    - gga_terraform

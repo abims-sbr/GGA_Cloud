@@ -1,6 +1,7 @@
 roles/geerlingguy.git
 roles/geerlingguy.docker
 roles/andrewrothstein.terraform/
+roles/andrewrothstein.unarchive-deps/
 roles/gga_terraform/files/.terraform.lock.hcl
 roles/gga_terraform/files/.terraform/
 roles/gga_terraform/files/hosts
