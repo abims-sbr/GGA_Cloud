@@ -1,5 +1,4 @@
 - hosts: os_vms
   become: true
   roles:
-    - cluster_software
     - gga_load_data

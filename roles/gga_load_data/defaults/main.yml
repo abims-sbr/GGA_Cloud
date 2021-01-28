@@ -10,6 +10,6 @@ gga_load_data: gga_load_data.py
 
 genus_sp: citrus_sinensis
 
-input_sp: files/yml_example_input.yml
+input_sp: files/input_example.yml
 
 config_file: files/config_example.yml
