@@ -8,3 +8,4 @@ roles/gga_terraform/files/.terraform/
 roles/gga_terraform/files/hosts
 roles/gga_terraform/files/terraform.tfstate
 roles/gga_terraform/files/terraform.tfstate.backup
+collections/

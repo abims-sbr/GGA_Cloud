@@ -1,4 +1,11 @@
+# Test with terraform module
+#- name: Run terraform
+#  terraform: 
+#    project_path: '{{ role_path }}/files/'
+#    force_init: yes
+
+# Test with community.general collection
 - name: Run terraform
-  terraform: 
+  community.general.terraform: 
     project_path: '{{ role_path }}/files/'
     force_init: yes
