@@ -1,33 +1,33 @@
 variable "os_auth_url" {
     description = "The endpoint url to connect to OpenStack."
-    default = "https://genostack-api-keystone.genouest.org/v3"
+    default = {{ os_auth_url }}
 }
 variable "os_project_id" {
     description = "The ID of the Tenant."
-    default = "d84c93cbdb4e4b0a8a91ecdc4e7254f4"
+    default = {{ os_project_id }}
 }
 variable "os_project_name" {
     description = "The name of the Tenant."
-    default = "rdallet"
+    default = {{ os_project_name }}
 }
 variable "os_user_domain_name" {    
     description = "The user domain name."    
-    default = "Users"
+    default = {{ os_user_domain }}
 }
 variable "os_project_domain_id" {    
     description = "The project domain ID."    
-    default = "0de861d3d0fc43eabf692d6dbb1cc257"
+    default = {{ os_project_domain_id }}
 }
 variable "os_user_name" {
     description = "The username for the Tenant."
-    default = "rdallet" 
+    default = {{ os_user_name }}
 }
 variable "os_password" {
     description = "The user password"
-    default = "{{ terraform_password }}"
+    default = {{ terraform_password }}
 }
 variable "tenant_network" {    
     description = "The network to be used."    
-    default = "genouest-ext"
+    default = {{ tenant_network }}
 }
 

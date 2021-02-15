@@ -4,8 +4,21 @@
 #    project_path: '{{ role_path }}/files/'
 #    force_init: yes
 
+# Generate terraform templates
+- name: Generate var template
+  ansible.builtin.template:
+    src: '{{ role_path }}/files/var.tf.j2'
+    dest: '{{ playbook_dir }}/terraform/'
+    mode: "u=rw,g=r,o=r"
+
+- name: Generate resource template
+  ansible.builtin.template:
+    src: '{{ role_path }}/files/resource.tf.j2'
+    dest: '{{ playbook_dir }}/terraform/'
+    mode: "u=rw,g=r,o=r"
+
 # Test with community.general collection
 - name: Run terraform
   community.general.terraform: 
-    project_path: '{{ role_path }}/files/'
+    project_path: '{{ playbook_dir }}/terraform/'
     force_init: yes

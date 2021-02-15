@@ -1,11 +1,12 @@
 ansible_vault
+group_vars/os_vms.yml
 roles/geerlingguy.git
 roles/geerlingguy.docker
 roles/andrewrothstein.terraform/
 roles/andrewrothstein.unarchive-deps/
-roles/gga_terraform/files/.terraform.lock.hcl
-roles/gga_terraform/files/.terraform/
-roles/gga_terraform/files/hosts
-roles/gga_terraform/files/terraform.tfstate
-roles/gga_terraform/files/terraform.tfstate.backup
+terraform/.terraform.lock.hcl
+terraform/.terraform/
+terraform/hosts
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
 collections/
