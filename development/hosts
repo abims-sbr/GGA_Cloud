@@ -1,3 +1,6 @@
+[localhost]
+127.0.0.1
+
 [os_cloud]
 https://genostack-api-keystone.genouest.org/v3 
 

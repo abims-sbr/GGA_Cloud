@@ -1,33 +1,32 @@
 variable "os_auth_url" {
     description = "The endpoint url to connect to OpenStack."
-    default = {{ os_auth_url }}
+    default = "{{ os_auth_url }}"
 }
 variable "os_project_id" {
     description = "The ID of the Tenant."
-    default = {{ os_project_id }}
+    default = "{{ os_project_id }}"
 }
 variable "os_project_name" {
     description = "The name of the Tenant."
-    default = {{ os_project_name }}
+    default = "{{ os_project_name }}"
 }
 variable "os_user_domain_name" {    
     description = "The user domain name."    
-    default = {{ os_user_domain }}
+    default = "{{ os_user_domain }}"
 }
 variable "os_project_domain_id" {    
     description = "The project domain ID."    
-    default = {{ os_project_domain_id }}
+    default = "{{ os_project_domain_id }}"
 }
 variable "os_user_name" {
     description = "The username for the Tenant."
-    default = {{ os_user_name }}
+    default = "{{ os_user_name }}"
 }
 variable "os_password" {
     description = "The user password"
-    default = {{ terraform_password }}
+    default = "{{ terraform_password }}"
 }
 variable "tenant_network" {    
     description = "The network to be used."    
-    default = {{ tenant_network }}
+    default = "{{ tenant_network }}"
 }
-

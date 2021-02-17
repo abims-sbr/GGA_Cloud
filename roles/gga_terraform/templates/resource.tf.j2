@@ -6,12 +6,11 @@ terraform {
   }
 }
 
-resource "openstack_compute_instance_v2" {{ vm_name }} {
-    name            = {{ vm_name }}
-#    image_name      = {{ vm_image_name }}
-    image_id        = {{ vm_image_id }}
-    flavor_name     = {{ vm_flavor_name }}
-    key_pair        = {{ vm_key_pair }}
+resource "openstack_compute_instance_v2" "{{ vm_name }}" {
+    name            = "{{ vm_name }}"
+    image_id        = "{{ vm_image_id }}"
+    flavor_name     = "{{ vm_flavor_name }}"
+    key_pair        = "{{ vm_key_pair }}"
     security_groups = ["default"]
 
     network {

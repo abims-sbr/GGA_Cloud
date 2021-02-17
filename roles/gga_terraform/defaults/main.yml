@@ -1,11 +1,21 @@
 ---
 
-os_vms_user: debian
+# var.tf variables
+os_auth_url: "{{ os_auth_url }}"
+os_project_id: "{{ os_project_id }}"
+os_project_name: "{{ os_project_name }}"
+os_user_domain: "{{ os_user_domain }}"
+os_project_domain_id: "{{ os_project_domain_id }}"
+os_user_name: "{{ os_user_name }}"
+tenant_network: "{{ tenant_network }}"
+terraform_password: "{{ terraform_password }}"
 
-terraform_password: !vault |
-          $ANSIBLE_VAULT;1.1;AES256
-          36643331613138663263623032396137333635373734383862306464366336393439643362326364
-          3234656166316635356530373163333064346165663962650a666663383261306230306266376634
-          35363261363436643236663363353132326565646261323038303731353834323666633232656466
-          3836346566326636320a376164636430666162313132316264636534623761363561346263633231
-          3834
+# resource.tf variables
+vm_name: "{{ vm_name }}"
+vm_image_name: "{{ vm_image_name }}"
+vm_image_id: "{{ vm_image_id }}"
+vm_flavor_name: "{{ vm_flavor_name }}"
+vm_key_pair: "{{ vm_key_pair }}"
+
+# host template variable
+os_vms_user: debian
