@@ -11,6 +11,12 @@
     dest: '{{ playbook_dir }}/terraform/resource.tf'
     mode: "u=rw,g=r,o=r"
 
+- name: Generate outputs template
+  ansible.builtin.template:
+    src: '{{ role_path }}/templates/outputs.tf.j2'
+    dest: '{{ playbook_dir }}/terraform/outputs.tf'
+    mode: "u=rw,g=r,o=r"
+
 # Run terraform  with community.general collection
 - name: Run terraform
   community.general.terraform: 

@@ -19,7 +19,6 @@
     accept_hostkey: yes
     force: yes
     recursive: no
-#    update: yes
 
 - name: Installing python libraries
   pip:
