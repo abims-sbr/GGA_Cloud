@@ -1,6 +1,0 @@
----
-
-- name: Install Ubuntu 18 requirements
-  package:
-    state: present
-    name: "{{ requirements }}"

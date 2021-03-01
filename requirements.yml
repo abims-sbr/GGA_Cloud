@@ -1,11 +1,9 @@
 ---
 roles:
-  - src: andrewrothstein.terraform
-    version: v2.2.53
   - src: geerlingguy.git
     version: 3.0.0
   - src: geerlingguy.docker
-    version: 2.9.0
+    version: 3.0.0
 
 collections:
   - name: community.general

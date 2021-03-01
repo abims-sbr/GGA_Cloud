@@ -1,6 +1,0 @@
----
-
-- name: Install Debian 10 requirements
-  package:
-    state: present
-    name: "{{ requirements }}"

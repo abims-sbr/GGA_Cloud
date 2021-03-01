@@ -1,5 +1,4 @@
 ansible_vault
-group_vars/localhost.yml
 roles/geerlingguy.git
 roles/geerlingguy.docker
 collections/

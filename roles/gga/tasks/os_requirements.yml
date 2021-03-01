@@ -1,5 +1,3 @@
----
-
 - name: Include os specific vars
   include_vars: "{{ item }}"
   with_first_found:

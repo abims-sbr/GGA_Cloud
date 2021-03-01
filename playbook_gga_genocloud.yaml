@@ -1,4 +1,6 @@
 - hosts: os_vms
-  become: true
+#  become: true
   roles:
-    - gga_load_data
+#    - name: geerlingguy.docker
+#      become: yes
+    - gga
