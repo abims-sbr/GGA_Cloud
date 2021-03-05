@@ -1,0 +1,24 @@
+# Connexion directe avec le bastion.
+# Pensez à adapter le User et le IdentityFile selon vos besoins.
+Host os_cloud
+ Hostname ${os_cloud_ip}
+ User ${os_cloud_user}
+ IdentityFile ${identity_file}
+
+# Pour toutes les machines de la zone privée :
+# Vous pouvez renseigner un range d’IPs ou une zone dns, exemple:
+#    *.eu-west-1.compute.amazonaws.com
+Host ${os_vms_ip}
+# Proxifier la connexion au travers du bastion.
+ ProxyCommand ssh os_cloud -F ssh.cfg -W %h:22
+# ProxyCommand ssh -F ssh.cfg -W %h:%p os_cloud
+# A adapter à votre cas : le User et la clé pour les connexions aux machines privées.
+ User ${os_vms_user}
+ IdentityFile ${identity_file}
+
+# Directives de multiplexing SSH
+Host *
+ ControlMaster   auto
+# ControlPath     ~/.ssh/mux-%r@%h:%p
+ ControlPath     ~/.ansible/cp
+ ControlPersist  15m

@@ -1,5 +1,8 @@
 ---
 
+# terraform directory
+terraform_dir: "{{ playbook_dir }}/terraform"
+
 # var.tf variables
 os_auth_url: "{{ os_auth_url }}"
 os_project_id: "{{ os_project_id }}"
@@ -19,3 +22,6 @@ vm_key_pair: "{{ vm_key_pair }}"
 
 # host template variable
 os_vms_user: debian
+
+# ssh config file
+ssh_key_path: ~/.ssh/id_rsa.pub

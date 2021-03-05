@@ -1,24 +1,35 @@
+# Create terraform working directory
+- name: Create terraform repository
+  ansible.builtin.file:
+    path: "{{ terraform_dir }}"
+    state: directory
+
+- name: Copy provider file in terraform directory
+  ansible.builtin.copy:
+    src: "{{ role_path }}/files/providers.tf"
+    dest: "{{ terraform_dir }}"
+
 # Generate terraform templates
 - name: Generate var template
   ansible.builtin.template:
-    src: '{{ role_path }}/templates/var.tf.j2'
-    dest: '{{ playbook_dir }}/terraform/var.tf'
+    src: var.tf.j2
+    dest: "{{ terraform_dir }}/var.tf"
     mode: "u=rw,g=r,o=r"
 
 - name: Generate resource template
   ansible.builtin.template:
-    src: '{{ role_path }}/templates/resource.tf.j2'
-    dest: '{{ playbook_dir }}/terraform/resource.tf'
+    src: resource.tf.j2
+    dest: "{{ terraform_dir }}/resource.tf"
     mode: "u=rw,g=r,o=r"
 
 - name: Generate outputs template
   ansible.builtin.template:
-    src: '{{ role_path }}/templates/outputs.tf.j2'
-    dest: '{{ playbook_dir }}/terraform/outputs.tf'
+    src: outputs.tf.j2
+    dest: "{{ terraform_dir }}/outputs.tf"
     mode: "u=rw,g=r,o=r"
 
 # Run terraform  with community.general collection
 - name: Run terraform
   community.general.terraform: 
-    project_path: '{{ playbook_dir }}/terraform/'
+    project_path: "{{ terraform_dir }}"
     force_init: yes

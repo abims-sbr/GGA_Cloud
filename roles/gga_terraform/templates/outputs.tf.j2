@@ -9,3 +9,17 @@ resource "local_file" "AnsibleInventory" {
  )
  filename = "hosts"
 }
+
+resource "local_file" "SSHconfig" {
+ content = templatefile("{{ role_path }}/templates/ssh_cfg.tmpl",
+ {
+  os_cloud_ip = "{{ os_auth_url }}",
+  os_cloud_user = "{{ os_user_name }}",
+  identity_file = "{{ ssh_key_path }}",
+  os_vms_ip = openstack_compute_instance_v2.{{ vm_name }}.access_ip_v4
+  os_vms_user = "{{ os_vms_user }}"
+ }
+ )
+ filename = "ssh.cfg"
+}
+  
