@@ -19,6 +19,7 @@ vm_image_name: "{{ vm_image_name }}"
 vm_image_id: "{{ vm_image_id }}"
 vm_flavor_name: "{{ vm_flavor_name }}"
 vm_key_pair: "{{ vm_key_pair }}"
+vm_security_group: "{{ vm_security_group }}"
 
 # host template variable
 os_vms_user: debian

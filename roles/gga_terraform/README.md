@@ -31,7 +31,7 @@ https://www.terraform.io/docs/providers/index.html
 
 - resource.tf
 
-Le bloc ressource défini une partie de l'infrastructure. Une ressource peut être un composant physique ou une ressource logique.
+The resource block defines part of the infrastructure. A resource can be a physical component or a logical resource.
 
 https://www.terraform.io/docs/configuration/resources.html
 

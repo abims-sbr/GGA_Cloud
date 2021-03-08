@@ -2,8 +2,3 @@
 
 collections:
   - community.general
-
-#dependencies:
-#- src: andrewrothstein.terraform
-#  version: v2.2.53
-
