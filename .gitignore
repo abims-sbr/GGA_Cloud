@@ -2,11 +2,4 @@ ansible_vault
 roles/geerlingguy.git
 roles/geerlingguy.docker
 collections/
-terraform/var.tf
-terraform/resource.tf
-terraform/outputs.tf
-terraform/hosts
-terraform/terraform.tfstate
-terraform/terraform.tfstate.backup
-terraform/.terraform.lock.hcl
-terraform/.terraform/
+terraform/

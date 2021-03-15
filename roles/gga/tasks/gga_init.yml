@@ -1,3 +1,15 @@
+# Copy config files
+- name: Copy configuration file
+  ansible.builtin.copy:
+    src: "{{ role_path }}/files/{{ config_file }}"
+    dest: "{{ repo_folder }}"
+
+- name: Copy input species file
+  ansible.builtin.copy:
+    src: "{{ role_path }}/files/{{ input_sp }}"
+    dest: "{{ repo_folder }}"
+
+# Initialize GGA
 - name: Run gga_init script
   command: "python3 {{ gga_init }} {{ input_sp }} -c {{ config_file }}"
   args:

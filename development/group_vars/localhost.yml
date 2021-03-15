@@ -5,8 +5,10 @@ vm_image_name: Debian10
 vm_image_id: f7be72a3-1765-4212-8094-59c442201cb2
 vm_flavor_name: m1.medium
 vm_key_pair: rdallet-sbr
+vm_security_group: default
 
 os_auth_url: https://genostack-api-keystone.genouest.org/v3
+os_hostname: openstack.genouest.org
 os_project_id: d84c93cbdb4e4b0a8a91ecdc4e7254f4
 os_project_name: rdallet
 os_user_domain: Users
