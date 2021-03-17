@@ -4,7 +4,7 @@ vm_name: GGA
 vm_image_name: Debian10
 vm_image_id: f7be72a3-1765-4212-8094-59c442201cb2
 vm_flavor_name: m1.medium
-vm_key_pair: rdallet-sbr
+vm_key_pair: rdallet_vbox
 vm_security_group: default
 
 os_auth_url: https://genostack-api-keystone.genouest.org/v3

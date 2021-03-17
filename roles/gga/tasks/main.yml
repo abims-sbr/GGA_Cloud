@@ -1,10 +1,10 @@
 - name: Install os requirements
   include_tasks: os_requirements.yml
 
-- name: Install GGA
+- name: GGA install
   include_tasks: gga_install.yml
 
-- name: Init GGA
+- name: GGA init
   include_tasks: gga_init.yml
 
 - name: GGA load data
