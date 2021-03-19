@@ -11,6 +11,6 @@
 
 # Initialize GGA
 - name: Run gga_init script
-  command: "python3 {{ gga_init }} {{ input_sp }} -c {{ config_file }}"
+  command: "python3 {{ gga_init }} {{ input_sp }} --config {{ config_file }}"
   args:
     chdir: "{{ repo_folder }}"

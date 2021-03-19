@@ -1,21 +1,33 @@
 # This is the configuration file used by the gga_init.py, gga_load_data.py and run_workflow.py scripts
-# It contains (sensible) variables to set up different docker services
+# It contains (sensible) variables to set up different docker services and should not be committed when filled
 
 # "all" section contains variables used by several services at once or the paths to import sensible files that cannot be procedurally generated/formatted using the scripts
 all:
-      custom_host: localhost  # The hosting machine name
-      custom_authelia_config_path: /path/to/your/authelia/config  # The path to the authelia config yml to use, an example is available in the "examples" folder at the repo root
-# "galaxy" section contains variables used to set up the galaxy service
+      # The hosting machine name
+      hostname: localhost
+      dashboard_port: 8001
+      http_port: 8888
+      https_port: 8889
+      # IP of the upstream proxy (for traefik)
+      proxy_ip: XXXXXXXXXXXX
+      auth_hostname: XXXXXXXXXXXX
+      # Path to the custom authelia configuration file (j2 template)
+      authelia_config_path: /path/to/authelia_config.yml.j2 
+# galaxy-specific environment variables
 galaxy:
-      custom_galaxy_default_admin_email: admin@galaxy.org  # The default admin email (used to connect to the instance)
-      custom_galaxy_defaut_admin_user: admin  # The default admin user
-      custom_galaxy_default_admin_password: password  # The default admin password (used to connect to the instance)
-      custom_galaxy_config_master_api_key: master  # The master API key (not in use at the moment so you can skip this)
-      custom_galaxy_tripal_password: galaxy_tripal_password  # Same as custom_tripal_admin_password (connection to db relies on this)
-      custom_galaxy_web_apollo_user: admin_apollo@galaxy.org  # Apollo user
-      custom_galaxy_web_apollo_password: galaxy_apollo_password  # Apollo password tied to the user above
+      galaxy_default_admin_email: gga@galaxy.org
+      galaxy_defaut_admin_user: gga
+      galaxy_default_admin_password: password
+      galaxy_config_master_api_key: master
+      webapollo_user: admin_apollo@galaxy.org
+      webapollo_password: apollopass
+# tripal-specific variables
 tripal:
-      custom_tripal_admin_password: galaxy_tripal_password  # Same as custom_galay_tripal_password (connection to db relies on this)
-      custom_banner: /path/to/banner  # Custom banner, TODO: defaults to a generic banner
-      custom_theme: "abims_gga"   # Use this to use another theme
-      custom_theme_git_clone: "http://gitlab.sb-roscoff.fr/abims/e-infra/tripal_gga.git"  # Use this to install another theme than the default one
+      # Tripal database password (also used by galaxy as an environment variable)
+      tripal_password: tripalpass
+      # Custom banner path 
+      banner_path: /home/fr2424/sib/alebars/projects/gga_load_data/misc/banner.png  
+      # Use this to use another theme
+      tripal_theme_name: abims
+      tripal_theme_git_clone: http://gitlab.sb-roscoff.fr/abims/e-infra/tripal_abims.git  # Use this to install another theme (cannot be named custom_theme_git_clone currently)
+

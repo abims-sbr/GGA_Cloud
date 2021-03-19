@@ -1,4 +1,4 @@
 - name: Run gga_load_data script
-  command: "python3 {{ gga_load_data }} {{ input_sp }} -c {{ config_file }}"
+  command: "python3 {{ gga_load_data }} {{ input_sp }} --config {{ config_file }}"
   args:
     chdir: "{{ repo_folder }}"
