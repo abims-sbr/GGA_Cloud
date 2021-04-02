@@ -9,6 +9,7 @@ repo_folder: /opt/gga_load_data
 # Scripts name
 gga_init: gga_init.py
 gga_load_data: gga_load_data.py
+gga_load_data_version: 7fb2d08e1af90b27944ecf7d766348565ac9bf0d
 
 # Config files for GGA scripts
 config_file: config_example.yml

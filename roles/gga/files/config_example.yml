@@ -25,9 +25,9 @@ galaxy:
 tripal:
       # Tripal database password (also used by galaxy as an environment variable)
       tripal_password: tripalpass
-      # Custom banner path 
-      banner_path: /home/fr2424/sib/alebars/projects/gga_load_data/misc/banner.png  
+      # Custom banner path
+      banner_path: /home/fr2424/sib/alebars/projects/gga_load_data/misc/banner.png
       # Use this to use another theme
       tripal_theme_name: abims
-      tripal_theme_git_clone: http://gitlab.sb-roscoff.fr/abims/e-infra/tripal_abims.git  # Use this to install another theme (cannot be named custom_theme_git_clone currently)
-
+      # Use this to install another theme (cannot be named custom_theme_git_clone currently)
+      tripal_theme_git_clone: http://gitlab.sb-roscoff.fr/abims/e-infra/tripal_abims.git
