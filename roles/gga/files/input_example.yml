@@ -2,37 +2,37 @@
 # The file consists in a "list" of species for which the script will have to create these stacks/load data into galaxy/run workflows
 # This file is internally turned into a list of dictionaries by the scripts
 
-# Dummy value the user gives to designate the species (isn't used by the script)
-citrus_sinensis:
+citrus_sinensis:  # Dummy value to designate the species (isn't used by the script)
+  description:
   # Species description, leave blank if unknown or you don't want it to be used
   # These parameters are used to set up the various urls and adresses in different containers
   # The script requires at least the genus to be specified
-  description:
-    genus: "citrus"
-    species: "sinensis"
-    sex: ""
+    genus: "Citrus"  # Mandatory!
+    species: "sinensis" # Mandatory!
+    sex: "male"
     strain: ""
     common_name: ""
     origin: ""
+  # the sex and strain, the script will look for files containing the genus, species, sex and strain of the species)
+  # If no file corresponding to the description is found, this path will be considered empty and the script will
+  # proceed to the next step (create the directory tree for the GGA docker stack)
   data:
-    parent_directory: ""
-    # Sequence of paths to the different datasets to copy and import into galaxy
-    # WARNING: The paths must be absolute paths!
-    genome_path: "{{ repo_folder }}/examples/src_data/genome/v1.0/Citrus_sinensis-scaffold00001.fasta"
-    transcripts_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/Citrus_sinensis-orange1.1g015632m.g.fasta"
-    proteins_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/functional_annotation/Blastx_citrus_sinensis-orange1.1g015632m.g.fasta.0_vs_nr.out"
-    #proteins_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/functional_annotation/Blastx_citrus_sinensis-orange1.1g015632m.g.fasta.0_vs_uniprot_sprot.fasta.out"
-    gff_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/Citrus_sinensis-orange1.1g015632m.g.gff3"
-    interpro_path: ""
+  # Sequence of paths to the different datasets to copy and import into the galaxy container (as a shared library)
+  # Must be absolute paths to the dataset
+    genome_path: "/opt/gga_load_data/examples/src_data/genome/v1.0/Citrus_sinensis-scaffold00001.fasta" # Mandatory!
+    transcripts_path: "/opt/gga_load_data/examples/src_data/annotation/v1.0/Citrus_sinensis-orange1.1g015632m.g.fasta"  # Mandatory!
+    proteins_path: "" # Mandatory!
+    gff_path: "/opt/gga_load_data/examples/src_data/annotation/v1.0/Citrus_sinensis-orange1.1g015632m.g.gff3" # Mandatory!
+    interpro_path: "/opt/gga_load_data/examples/src_data/annotation/v1.0/functional_annotation/Citrus_sinensis-orange1.1g015632m.g.iprscan.xml"
     orthofinder_path: ""
     blastp_path: ""
-    blastx_path: ""
-    # If the user has several genomes to upload to galaxy, the next scalar is used by the script to differentiate
-    # between these different versions and name directories according to it.
+    blastx_path: "/opt/gga_load_data/examples/src_data/annotation/v1.0/functional_annotation/Blastx_citrus_sinensis-orange1.1g015632m.g.fasta.0_vs_uniprot_sprot.fasta.out"
+    # If the user has several datasets of the same 'nature' (gff, genomes, ...) to upload to galaxy, the next scalar is used by the script to differentiate
+    # between these different versions and name directories according to it and not overwrite the existing data
     # If left empty, the genome will be considered version "1.0"
     genome_version: "1.0"
-    # Same as genome version, but for the analysis
-    ogs_version: ""
+    # Same as genome version, but for the OGS analysis
+    ogs_version: "1.0"
     performed_by: ""
   services:
   # Describe what optional services to deploy for the stack
