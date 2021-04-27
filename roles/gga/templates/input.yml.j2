@@ -1,0 +1,24 @@
+citrus_sinensis:
+  description:
+    genus: "Citrus"
+    species: "sinensis"
+    sex: "male"
+    strain: ""
+    common_name: ""
+    origin: ""
+  data:
+    genome_path: "{{ repo_folder }}/examples/src_data/genome/v1.0/Citrus_sinensis-scaffold00001.fasta" # Mandatory!
+    transcripts_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/Citrus_sinensis-orange1.1g015632m.g.fasta"  # Mandatory!
+    proteins_path: ""
+    gff_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/Citrus_sinensis-orange1.1g015632m.g.gff3" # Mandatory!
+    interpro_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/functional_annotation/Citrus_sinensis-orange1.1g015632m.g.iprscan.xml"
+    orthofinder_path: ""
+    blastp_path: ""
+    blastx_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/functional_annotation/Blastx_citrus_sinensis-orange1.1g015632m.g.fasta.0_vs_uniprot_sprot.fasta.out"
+    genome_version: "1.0"
+    ogs_version: "1.0"
+    performed_by: ""
+  services:
+    blast: "False"
+    wiki: "False"
+    apollo: "False"

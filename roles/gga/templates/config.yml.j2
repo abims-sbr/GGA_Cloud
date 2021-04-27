@@ -1,0 +1,17 @@
+all:
+      hostname: localhost
+      dashboard_port: 8001
+      http_port: 8888
+      proxy_ip: {{ ansible_default_ipv4.address }}
+galaxy:
+      galaxy_default_admin_email: gga@galaxy.org
+      galaxy_defaut_admin_user: gga
+      galaxy_default_admin_password: password
+      webapollo_user: admin_apollo@galaxy.org
+      webapollo_password: apollopass
+      galaxy_config_remote_user_maildomain: mydomain.com
+      persist_galaxy_data: "False"
+tripal:
+      tripal_password: tripalpass
+jbrowse:
+      menu_url: "http://localhost:8888/"

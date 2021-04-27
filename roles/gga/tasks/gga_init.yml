@@ -1,13 +1,27 @@
-# Copy config files
-- name: Copy configuration file
-  ansible.builtin.copy:
-    src: "{{ role_path }}/files/{{ config_file }}"
-    dest: "{{ repo_folder }}"
+# Build config template files
 
-- name: Copy input species file
-  ansible.builtin.copy:
-    src: "{{ role_path }}/files/{{ input_sp }}"
-    dest: "{{ repo_folder }}"
+- name: Generate configuration template
+  ansible.builtin.template:
+    src: config.yml.j2
+    dest: "{{ repo_folder }}/config.yml"
+    mode: "u=rw,g=r,o=r"
+
+- name: Generate input template
+  ansible.builtin.template:
+    src: input.yml.j2
+    dest: "{{ repo_folder }}/input.yml"
+    mode: "u=rw,g=r,o=r"
+
+# Copy config files
+#- name: Copy configuration file
+#  ansible.builtin.copy:
+#    src: "{{ role_path }}/files/{{ config_file }}"
+#    dest: "{{ repo_folder }}"
+
+#- name: Copy input species file
+#  ansible.builtin.copy:
+#    src: "{{ role_path }}/files/{{ input_sp }}"
+#    dest: "{{ repo_folder }}"
 
 # Initialize GGA
 - name: Run gga_init script
