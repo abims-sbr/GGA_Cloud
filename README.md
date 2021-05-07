@@ -1,31 +1,34 @@
-# ansible
+# Ansible
 
-## Inventaire
+![cloud_scheme](https://github.com/abims-sbr/GGA_Cloud/blob/master/static/images/cloud_scheme.png)
+
+## Inventory
 
 `development/hosts`
 
-## Usage
+## Use
 
-### Installer les dépendances
+### Dependencies installation
 ```
 ansible-galaxy install -r requirements.yml 
 ```
-ou pour les installer les 2 séparément :
+or to install both separately :
 ```
 ansible-galaxy install role -r requirements.yml 
 ansible-galaxy install collection -r requirements.yml 
 ```
 
-Besoin d'ajouter `collections_paths = ./collections` dans ansible.cfg pour utiliser les collections.
+Need to add `collections_paths = ./collections` in ansible.cfg to use collections.
 
-### Lancer le playbook
+### Run playbooks
 #### Dry mode
 ```
+ansible-playbook playbook_terraform.yml --check
 ansible-playbook playbook_gga_genocloud.yml --check
 ```
 
 #### Real mode
 ```
+ansible-playbook playbook_terraform.yml
 ansible-playbook playbook_gga_genocloud.yml
 ```
-
