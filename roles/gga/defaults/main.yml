@@ -16,55 +16,61 @@ config_file: config.yml
 input_sp: input.yml
 
 # Config variables
-hostname: localhost
+hostname: gga-192-168-100-89.vm.openstack.genouest.org
 dashboard_port: 8001
 http_port: 80
 #https_port: 8889
 proxy_ip: "{{ ansible_default_ipv4.address }}"
 #authentication_domain_name: XXXXXXXXXXXX
 #authelia_config_path: /path/to/authelia_config.yml
+#authelia_secrets_env_path: /path/to/authelia/secrets.env #  Required for Authelia. Path to the env file containing passwords and secrets needed for Authelia
+#authelia_db_postgres_password: XXXXXXXX #  Required for Authelia.
+
 ## Galaxy configuration variables
 galaxy_default_admin_email: gga@galaxy.org
 galaxy_defaut_admin_user: gga
 galaxy_default_admin_password: password
-webapollo_user: admin_apollo@galaxy.org
-webapollo_password: apollopass
 galaxy_config_remote_user_maildomain: mydomain.com
 persist_galaxy_data: "False"
+webapollo_user: admin_apollo@galaxy.org
+webapollo_password: apollopass
+
 ## Tripal configuration variables
 tripal_password: tripalpass
-#banner_path: /my/path/banner.png
+#tripal_banner_path: /my/path/banner.png
 #tripal_theme_name: tripal_gga
 #tripal_theme_git_clone: http://gitlab.sb-roscoff.fr/abims/e-infra/tripal_gga.git
+
 ## Jbrowse configuration variables
 menu_url: "http://localhost:80/"
-
-# Species configuration variables
-species:
-  citrus_sinensis:
-    description:
-      genus: "Citrus"
-      species: "sinensis"
-      sex: "male"
-      strain: ""
-      common_name: ""
-      origin: ""
-    data:
-      genome_path: "{{ repo_folder }}/examples/src_data/genome/v1.0/Citrus_sinensis-scaffold00001.fasta" # Mandatory!
-      transcripts_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/Citrus_sinensis-orange1.1g015632m.g.fasta"  # Mandatory!
-      proteins_path: ""
-      gff_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/Citrus_sinensis-orange1.1g015632m.g.gff3" # Mandatory!
-      interpro_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/functional_annotation/Citrus_sinensis-orange1.1g015632m.g.iprscan.xml"
-      orthofinder_path: ""
-      blastp_path: ""
-      blastx_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/functional_annotation/Blastx_citrus_sinensis-orange1.1g015632m.g.fasta.0_vs_uniprot_sprot.fasta.out"
-      genome_version: "1.0"
-      ogs_version: "1.0"
-      performed_by: ""
-    services:
-      blast: "False"
-      wiki: "False"
-      apollo: "False"
+#jbrowse_menu_url: "http://localhost:80/"
 
 # Name of the organism for the directory tree structure
 genus_sp: citrus_sinensis
+
+# Species configuration variables
+input_species:
+   # description
+ - name : citrus_sinensis
+   genus: "Citrus"
+   species: "sinensis"
+   sex: "male"
+   strain: ""
+   common_name: ""
+   origin: ""
+   # data
+   genome_path: "{{ repo_folder }}/examples/src_data/genome/v1.0/Citrus_sinensis-scaffold00001.fasta" # Mandatory!
+   transcripts_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/Citrus_sinensis-orange1.1g015632m.g.fasta"  # Mandatory!
+   proteins_path: ""
+   gff_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/Citrus_sinensis-orange1.1g015632m.g.gff3" # Mandatory!
+   interpro_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/functional_annotation/Citrus_sinensis-orange1.1g015632m.g.iprscan.xml"
+   orthofinder_path: ""
+   blastp_path: ""
+   blastx_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/functional_annotation/Blastx_citrus_sinensis-orange1.1g015632m.g.fasta.0_vs_uniprot_sprot.fasta.out"
+   genome_version: "1.0"
+   ogs_version: "1.0"
+   performed_by: ""
+   # services
+   blast: "False"
+   wiki: "False"
+   apollo: "False"

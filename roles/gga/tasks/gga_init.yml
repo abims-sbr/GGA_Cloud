@@ -12,17 +12,6 @@
     dest: "{{ repo_folder }}/input.yml"
     mode: "u=rw,g=r,o=r"
 
-# Copy config files
-#- name: Copy configuration file
-#  ansible.builtin.copy:
-#    src: "{{ role_path }}/files/{{ config_file }}"
-#    dest: "{{ repo_folder }}"
-
-#- name: Copy input species file
-#  ansible.builtin.copy:
-#    src: "{{ role_path }}/files/{{ input_sp }}"
-#    dest: "{{ repo_folder }}"
-
 # Initialize GGA
 - name: Run gga_init script
   ansible.builtin.command: "python3 {{ gga_init }} {{ input_sp }} --config {{ config_file }} --force-traefik"

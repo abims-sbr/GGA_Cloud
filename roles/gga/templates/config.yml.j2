@@ -1,17 +1,17 @@
 all:
-      hostname: {{ hostname }}
-      dashboard_port: {{ dashboard_port }}
-      http_port: {{ http_port }}
-      proxy_ip: {{ ansible_default_ipv4.address }}
+  hostname: {{ hostname }}
+  dashboard_port: {{ dashboard_port }}
+  http_port: {{ http_port }}
+  proxy_ip: {{ ansible_default_ipv4.address }}
 galaxy:
-      galaxy_default_admin_email: {{ galaxy_default_admin_email }}
-      galaxy_defaut_admin_user: {{ galaxy_defaut_admin_user }}
-      galaxy_default_admin_password: {{ galaxy_default_admin_password }}
-      webapollo_user: {{ webapollo_user }}
-      webapollo_password: {{ webapollo_password }}
-      galaxy_config_remote_user_maildomain: {{ galaxy_config_remote_user_maildomain }}
-      persist_galaxy_data: "{{ persist_galaxy_data }}"
+  galaxy_default_admin_email: {{ galaxy_default_admin_email }}
+  galaxy_defaut_admin_user: {{ galaxy_defaut_admin_user }}
+  galaxy_default_admin_password: {{ galaxy_default_admin_password }}
+  galaxy_config_remote_user_maildomain: {{ galaxy_config_remote_user_maildomain }}
+  persist_galaxy_data: "{{ persist_galaxy_data }}"
+  webapollo_user: {{ webapollo_user }}
+  webapollo_password: {{ webapollo_password }}
 tripal:
-      tripal_password: {{ tripal_password }}
+  tripal_password: {{ tripal_password }}
 jbrowse:
-      menu_url: "{{ menu_url }}"
+  menu_url: "{{ menu_url }}"
