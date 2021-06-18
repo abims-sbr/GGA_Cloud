@@ -16,7 +16,8 @@ config_file: config.yml
 input_sp: input.yml
 
 # Config variables
-hostname: gga-192-168-100-89.vm.openstack.genouest.org
+#hostname: gga-192-168-100-237.vm.openstack.genouest.org
+hostname: "gga-{{ ( ansible_default_ipv4.address ) | replace('.','-') }}.vm.openstack.genouest.org"
 dashboard_port: 8001
 http_port: 80
 #https_port: 8889
