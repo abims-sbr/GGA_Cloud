@@ -1,4 +1,0 @@
-- hosts: os_vms
-  become: yes
-  roles:
-    - gga

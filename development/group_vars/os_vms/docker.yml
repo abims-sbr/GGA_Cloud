@@ -1,0 +1,3 @@
+---
+# List of docker users allowed
+docker_users: [debian]

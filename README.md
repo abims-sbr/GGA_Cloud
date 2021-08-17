@@ -10,6 +10,16 @@ The EOSC-Life project aims to create an open collaborative digital space for lif
 
 `development/hosts`
 
+
+## Playbooks
+
+### terraform.yml
+
+### gga_install.yml
+
+### gga_load_data.yml
+
+
 ## Use
 
 ### Dependencies installation
