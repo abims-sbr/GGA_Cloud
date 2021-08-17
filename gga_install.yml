@@ -8,4 +8,4 @@
       when:
         - ansible_os_family == 'Debian'
   roles:
-    - gga
+    - gga_install

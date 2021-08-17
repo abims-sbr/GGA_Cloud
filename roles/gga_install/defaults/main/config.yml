@@ -1,0 +1,31 @@
+---
+
+# Config variables
+hostname: gga_hostname
+dashboard_port: 8001
+http_port: 80
+#https_port: 443
+proxy_ip: your_ip_adress
+#authentication_domain_name: XXXXXXXXXXXX
+#authelia_config_path: /path/to/authelia_config.yml
+#authelia_secrets_env_path: /path/to/authelia/secrets.env #  Required for Authelia. Path to the env file containing passwords and secrets needed for Authelia
+#authelia_db_postgres_password: XXXXXXXX #  Required for Authelia.
+
+## Galaxy configuration variables
+galaxy_default_admin_email: gga@galaxy.org
+galaxy_defaut_admin_user: gga
+galaxy_default_admin_password: password
+galaxy_config_remote_user_maildomain: mydomain.com
+persist_galaxy_data: "False"
+webapollo_user: admin_apollo@galaxy.org
+webapollo_password: apollopass
+
+## Tripal configuration variables
+tripal_password: tripalpass
+#tripal_banner_path: /my/path/banner.png
+#tripal_theme_name: tripal_gga
+#tripal_theme_git_clone: http://gitlab.my_tripal_theme.git
+
+## Jbrowse configuration variables
+menu_url: "http://localhost:80/"
+#jbrowse_menu_url: "http://localhost:80/"

@@ -1,0 +1,31 @@
+---
+
+# Name of the organism for the directory tree structure
+genus_sp: genus_species
+
+# Species configuration variables
+input_species:
+   # description
+ - name : name
+   genus: "Genus"
+   species: "species"
+   sex: "sex"
+   strain: ""
+   common_name: ""
+   origin: ""
+   # data
+   genome_path: "" # Mandatory!
+   transcripts_path: ""  # Mandatory!
+   proteins_path: ""
+   gff_path: "" # Mandatory!
+   interpro_path: ""
+   orthofinder_path: ""
+   blastp_path: ""
+   blastx_path: ""
+   genome_version: "1.0"
+   ogs_version: "1.0"
+   performed_by: ""
+   # services
+   blast: "False"
+   wiki: "False"
+   apollo: "False"

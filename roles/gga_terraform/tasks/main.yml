@@ -28,7 +28,7 @@
     dest: "{{ terraform_dir }}/outputs.tf"
     mode: "u=rw,g=r,o=r"
 
-# Run terraform  with community.general collection
+# Run terraform with community.general collection
 - name: Run terraform
   community.general.terraform: 
     project_path: "{{ terraform_dir }}"
