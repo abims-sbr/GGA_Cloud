@@ -1,0 +1,16 @@
+---
+
+# GGA automation scripts repository
+repo_name: http://gitlab.sb-roscoff.fr/abims/e-infra/gga_load_data.git
+
+#Remote path where to clone the repository
+repo_folder: /opt/gga_load_data
+
+# Scripts name
+gga_get_data: gga_get_data.py
+gga_load_data: gga_load_data.py
+gga_load_data_version: v1.0.2
+
+# Config files for GGA scripts
+config_file: config.yml
+input_sp: input.yml
