@@ -11,11 +11,28 @@ The EOSC-Life project aims to create an open collaborative digital space for lif
 `development/hosts`
 
 
-## Playbooks
+## Roles
 
-### terraform.yml
+### gga_terraform
+
+The terraform role creates a "terraform" folder near to the playbook containing the configuration files of the virtual machine to be deployed.
+
+The configuration files created are:
+- a providers.tf file describing the cloud provider.
+- a resource.tf file describing the virtual machine to deploy.
+- a var.tf file gathering the different variables used.
+- an outputs.tf file describing the hosts and ssh_cfg files to generate.
+
+Finally, the role runs terraform to deploy the described virtual machine in the cloud.
 
 ### gga_install.yml
+
+The gga_install role create directory tree for organisms and deploy stacks for the input organisms as well as Traefik stacks.
+
+The gga_install role :
+- installs python requirements.
+- clones the [gga_load_data](http://gitlab.sb-roscoff.fr/abims/e-infra/gga_load_data/tree/master) repository and install some python librairies required by GGA.
+- generates a config.yml and input.yml required by gga_load_data scripts and runs gga_init.py scripts that deploy GGA docker stacks.
 
 ### gga_load_data.yml
 
