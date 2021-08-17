@@ -1,0 +1,6 @@
+---
+dependencies:
+- src: geerlingguy.git
+  version: 3.0.0
+- src: geerlingguy.docker
+  version: 3.0.0

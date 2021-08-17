@@ -1,0 +1,4 @@
+- hosts: os_vms
+  become: yes
+  roles:
+    - gga_load_data
