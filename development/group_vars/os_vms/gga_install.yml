@@ -1,34 +1,39 @@
 ---
 
+gga_load_data_version : fix_jbrowse_stack_deploy
+
 # Config variables
 #hostname: gga-192-168-100-237.vm.openstack.genouest.org
 hostname: "gga-{{ ( ansible_default_ipv4.address ) | replace('.','-') }}.vm.openstack.genouest.org"
-#proxy_ip: "{{ ansible_default_ipv4.address }}"
+proxy_ip: "{{ ansible_default_ipv4.address }}"
+authentication_domain_name: "auth.{{ hostname }}"
+#authelia_config_path: /path/to/authelia_config.yml
+#authelia_secrets_env_path: /path/to/authelia/secrets.env
+#authelia_db_postgres_password: psqlpwd
 
 # Name of the organism for the directory tree structure
-genus_sp: citrus_sinensis
+genus_species: citrus_sinensis
 
 # Species configuration variables
 input_species:
- - name : citrus_sinensis
+ - name : "{{ genus_species }}"
    genus: "Citrus"
    species: "sinensis"
    sex: "male"
-   strain: ""
-   common_name: ""
-   origin: ""
+   strain:
+   common_name:
+   origin:
    # data
    genome_path: "{{ repo_folder }}/examples/src_data/genome/v1.0/Citrus_sinensis-scaffold00001.fasta"
+   contig_prefix:
    transcripts_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/Citrus_sinensis-orange1.1g015632m.g.fasta"
-   proteins_path: ""
+   proteins_path:
    gff_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/Citrus_sinensis-orange1.1g015632m.g.gff3"
    interpro_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/functional_annotation/Citrus_sinensis-orange1.1g015632m.g.iprscan.xml"
-   orthofinder_path: ""
-   blastp_path: ""
+   orthofinder_path:
+   blastp_path:
    blastx_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/functional_annotation/Blastx_citrus_sinensis-orange1.1g015632m.g.fasta.0_vs_uniprot_sprot.fasta.out"
-   genome_version: "1.0"
-   ogs_version: "1.0"
-   performed_by: ""
-   blast: "False"
-   wiki: "False"
-   apollo: "False"
+   genome_version:
+   ogs_version:
+   blast: 0
+   go: 0

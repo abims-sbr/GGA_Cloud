@@ -1,5 +1,5 @@
 {% for specie in input_species %}
-{{ specie.name }}:
+- name: {{ specie.name }}
   description:
     genus: "{{ specie.genus }}"
     species: "{{ specie.species }}"
@@ -9,6 +9,7 @@
     origin: "{{ specie.origin }}"
   data:
     genome_path: "{{ specie.genome_path }}"
+    contig_prefix: "{{ specie.contig_prefix }}"
     transcripts_path: "{{ specie.transcripts_path }}"
     proteins_path: "{{ specie.proteins_path }}"
     gff_path: "{{ specie.gff_path }}"
@@ -18,9 +19,7 @@
     blastx_path: "{{ specie.blastx_path }}"
     genome_version: "{{ specie.genome_version }}"
     ogs_version: "{{ specie.ogs_version }}"
-    performed_by: "{{ specie.performed_by }}"
   services:
     blast: "{{ specie.blast }}"
-    wiki: "{{ specie.wiki }}"
-    apollo: "{{ specie.apollo }}"
+    go: "{{ specie.go }}"
 {% endfor %}

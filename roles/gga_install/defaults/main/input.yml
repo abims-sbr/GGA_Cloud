@@ -1,31 +1,42 @@
 ---
 
-# Name of the organism for the directory tree structure
-genus_sp: genus_species
+# Input file for the automated creation GGA docker stacks
+# The file consists in a "list" of species for which the script will have to create these stacks/load data into galaxy/run workflows
 
-# Species configuration variables
 input_species:
-   # description
- - name : name
-   genus: "Genus"
-   species: "species"
-   sex: "sex"
-   strain: ""
-   common_name: ""
-   origin: ""
-   # data
-   genome_path: "" # Mandatory!
-   transcripts_path: ""  # Mandatory!
-   proteins_path: ""
-   gff_path: "" # Mandatory!
-   interpro_path: ""
-   orthofinder_path: ""
-   blastp_path: ""
-   blastx_path: ""
-   genome_version: "1.0"
-   ogs_version: "1.0"
-   performed_by: ""
-   # services
-   blast: "False"
-   wiki: "False"
-   apollo: "False"
+ - name : genus_species
+
+   # Species description, leave blank if unknown or you don't want it to be used
+   # These parameters are used to set up the various urls and adresses in different containers
+   # The script requires at least the genus to be specified
+   genus: Genus
+   species: species
+   sex: sex
+   strain: strain
+   common_name: common_name
+   origin: origin
+
+   # Paths to the different datasets to copy and import into the galaxy container (as a shared library)
+   # Must be absolute paths to the dataset
+   genome_path: /path/to/repo/genus_species/src_data/genome/v1.0/genus_species-genome.fasta # Mandatory!
+   # Required when they are multiple strains from the same species to map the contig name prefix to the right JBrowse dataset ID in Tripal
+   # If multiple contig name prefixes, they must be separated by ";"
+   # example: "contig_prefix1;contig_prefix2"
+   contig_prefix:
+   transcripts_path: /path/to/repo/genus_species/src_data/annotation/v1.0/genus_species-annotation.fasta  # Mandatory!
+   proteins_path: # Mandatory!
+   gff_path: /path/to/repo/genus_species/src_data/annotation/v1.0/genus_species-annotation.gff3 # Mandatory!
+   interpro_path: /path/to/repo/genus_species/src_data/annotation/v1.0/functional_annotation/genus_species-functional_annotation.iprscan.xml
+   orthofinder_path: 
+   blastp_path: 
+   blastx_path: /path/to/repo/genus_species/src_data/annotation/v1.0/functional_annotation/Blastx_genus_species.fasta.out
+   # If the user has several datasets of the same 'nature' (gff, genomes, ...) to upload to galaxy, the next scalar is used by the script to differentiate
+   # between these different versions and name directories according to it and not overwrite the existing data
+   # If left empty, the genome will be considered version "1.0"
+   genome_version:
+   # Same as genome version, but for the OGS analysis
+   ogs_version:
+
+   # List the optional services/resources to add
+   blast: 0 # "1" to add links to blast form, "some/url" to specify, multiple urls as "Name1=url1&Name2=url2", "0" to disable it. Default: "0"
+   go: 0 # "1" to add links to GO summary, "0" to disable it. Default: "0"
