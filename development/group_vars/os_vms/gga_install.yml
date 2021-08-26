@@ -1,6 +1,6 @@
 ---
 
-gga_load_data_version : https_without_authelia
+gga_load_data_version : fix_jbrowse_stack_deploy
 
 # Config variables
 hostname: "gga-{{ ( ansible_default_ipv4.address ) | replace('.','-') }}.vm.openstack.genouest.org"
