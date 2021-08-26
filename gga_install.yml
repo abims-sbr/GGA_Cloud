@@ -1,11 +1,7 @@
 - hosts: os_vms
   become: yes
   pre_tasks:
-    - name: Update cache
-      apt:
-        update_cache: yes
-        cache_valid_time: 86400
-      when:
-        - ansible_os_family == 'Debian'
+    - name: Allow release-info to change for APT repositories
+      command: apt-get update -y --allow-releaseinfo-change
   roles:
     - gga_install

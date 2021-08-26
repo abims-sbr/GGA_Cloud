@@ -6,13 +6,10 @@ hostname: gga_hostname # Required. The hostname that will be used to access the 
 http_port: 80 # Required. The HTTP port docker will use on the hosting machine.
 https_port: 443 # Required for Authelia. The HTTPS port docker will use on the hosting machine.
 proxy_ip: your_ip_adress # Required. IP of the upstream proxy (used by Traefik).
-authentication_domain_name: auth.gga_hostname # Required for Authelia. The authentication domain name.
+#authentication_domain_name: auth.gga_hostname # Required for Authelia. The authentication domain name.
 #authelia_config_path: /path/to/authelia_config.yml # Required for Authelia. Path to the Authelia configuration file.
 #authelia_secrets_env_path: /path/to/authelia/secrets.env # Required for Authelia. Path to the env file containing passwords and secrets needed for Authelia
 #authelia_db_postgres_password: psqlpwd # Required for Authelia.
-#authelia_config_path: {{ authelia_config_path }}
-#authelia_secrets_env_path: {{ authelia_secrets_env_path }}
-#authelia_db_postgres_password: {{ authelia_db_postgres_password }}
 
 # galaxy-specific variables
 galaxy_default_admin_email: gga@galaxy.org # Required

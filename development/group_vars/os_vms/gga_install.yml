@@ -1,15 +1,12 @@
 ---
 
-gga_load_data_version : fix_jbrowse_stack_deploy
+gga_load_data_version : https_without_authelia
 
 # Config variables
-#hostname: gga-192-168-100-237.vm.openstack.genouest.org
 hostname: "gga-{{ ( ansible_default_ipv4.address ) | replace('.','-') }}.vm.openstack.genouest.org"
+http_port: 80
+https_port: 443
 proxy_ip: "{{ ansible_default_ipv4.address }}"
-authentication_domain_name: "auth.{{ hostname }}"
-#authelia_config_path: /path/to/authelia_config.yml
-#authelia_secrets_env_path: /path/to/authelia/secrets.env
-#authelia_db_postgres_password: psqlpwd
 
 # Name of the organism for the directory tree structure
 genus_species: citrus_sinensis
