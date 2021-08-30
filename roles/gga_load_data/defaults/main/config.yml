@@ -1,0 +1,29 @@
+---
+# This is the configuration template file used by the gga_init.py, gga_load_data.py and run_workflow.py scripts
+
+# These variables are used by several services at once or the paths to import sensitive files
+hostname: gga_hostname # Required. The hostname that will be used to access the application (http://hostname/sp/genus_species/)), possibly with a reverse proxy redirecting the requests to the host machine with the right port (http_port).
+http_port: 80 # Required. The HTTP port docker will use on the hosting machine.
+https_port: 443 # Required for Authelia. The HTTPS port docker will use on the hosting machine.
+proxy_ip: your_ip_adress # Required. IP of the upstream proxy (used by Traefik).
+#authentication_domain_name: auth.gga_hostname # Required for Authelia. The authentication domain name.
+#authelia_config_path: /path/to/authelia_config.yml # Required for Authelia. Path to the Authelia configuration file.
+#authelia_secrets_env_path: /path/to/authelia/secrets.env # Required for Authelia. Path to the env file containing passwords and secrets needed for Authelia
+#authelia_db_postgres_password: psqlpwd # Required for Authelia.
+
+# galaxy-specific variables
+galaxy_default_admin_email: gga@galaxy.org # Required
+galaxy_defaut_admin_user: gga # Required
+galaxy_default_admin_password: password # Required
+galaxy_default_admin_key: mykey # Required
+galaxy_config_remote_user_maildomain: mydomain.com # Required
+galaxy_persist_data: "False" # Required
+
+# tripal-specific variables
+tripal_password: tripalpass # Required. Tripal database password (also used by galaxy as an environment variable)
+#tripal_banner_path: /my/path/banner.png # Optional. Custom banner path
+#tripal_theme_name: tripal_gga # Optional. Use this to use another theme
+#tripal_theme_git_clone: http://gitlab.my_tripal_theme.git # Optional. Use this to install another theme.
+
+# jbrowse-specific variables
+#jbrowse_menu_url: "http://localhost:8888/" # Optional. Used with run_workflow_phaeoexplorer.py: if present, this variable is used to define JBrowse menu_url (to define the template url for the JBrowse feature's link to Tripal), if absent, will use default "https://hostname"

@@ -1,2 +1,5 @@
+- name: GGA get data
+  include_tasks: gga_get_data.yml
+
 - name: GGA load data
   include_tasks: gga_load_data.yml

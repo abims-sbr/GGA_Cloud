@@ -1,0 +1,4 @@
+- name: Run gga_get_data script
+  command: "python3 {{ gga_get_data }} {{ input_sp }}"
+  args:
+    chdir: "{{ repo_folder }}"

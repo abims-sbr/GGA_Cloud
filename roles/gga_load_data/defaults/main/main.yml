@@ -9,8 +9,11 @@ repo_folder: /opt/gga_load_data
 # Scripts name
 gga_get_data: gga_get_data.py
 gga_load_data: gga_load_data.py
-gga_load_data_version: v1.0.2
+gga_load_data_version: v2.1.0
 
 # Config files for GGA scripts
 config_file: config.yml
 input_sp: input.yml
+
+# Name of the organism for the directory tree structure
+genus_species: genus_species

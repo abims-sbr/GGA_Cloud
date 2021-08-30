@@ -28,11 +28,6 @@
 #      retries: 5
 #      start_period: 30s
 
-- name: Run gga_get_data script
-  command: "python3 {{ gga_get_data }} {{ input_sp }}"
-  args:
-    chdir: "{{ repo_folder }}"
-
 - name: Run gga_load_data script
   command: "python3 {{ gga_load_data }} {{ input_sp }} --config {{ config_file }}"
   args:

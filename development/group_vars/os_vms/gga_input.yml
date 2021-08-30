@@ -1,13 +1,5 @@
 ---
 
-gga_load_data_version : fix_jbrowse_stack_deploy
-
-# Config variables
-hostname: "gga-{{ ( ansible_default_ipv4.address ) | replace('.','-') }}.vm.openstack.genouest.org"
-http_port: 80
-https_port: 443
-proxy_ip: "{{ ansible_default_ipv4.address }}"
-
 # Name of the organism for the directory tree structure
 genus_species: citrus_sinensis
 

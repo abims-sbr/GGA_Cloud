@@ -1,0 +1,7 @@
+---
+
+# Config variables
+hostname: "gga-{{ ( ansible_default_ipv4.address ) | replace('.','-') }}.vm.openstack.genouest.org"
+http_port: 80
+https_port: 443
+proxy_ip: "{{ ansible_default_ipv4.address }}"
