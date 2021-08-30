@@ -1,5 +1,7 @@
 ---
 
+data_folder: /mnt/gga_data/test-data
+
 # Name of the organism for the directory tree structure
 genus_species: citrus_sinensis
 
@@ -13,15 +15,15 @@ input_species:
    common_name:
    origin:
    # data
-   genome_path: "{{ repo_folder }}/examples/src_data/genome/v1.0/Citrus_sinensis-scaffold00001.fasta"
+   genome_path: "{{ data_folder }}/genome/v1.0/Citrus_sinensis-scaffold00001.fasta"
    contig_prefix:
-   transcripts_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/Citrus_sinensis-orange1.1g015632m.g.fasta"
+   transcripts_path: "{{ data_folder }}/annotation/v1.0/Citrus_sinensis-orange1.1g015632m.g.fasta"
    proteins_path:
-   gff_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/Citrus_sinensis-orange1.1g015632m.g.gff3"
-   interpro_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/functional_annotation/Citrus_sinensis-orange1.1g015632m.g.iprscan.xml"
+   gff_path: "{{ data_folder }}/annotation/v1.0/Citrus_sinensis-orange1.1g015632m.g.gff3"
+   interpro_path: "{{ data_folder }}/annotation/v1.0/functional_annotation/Citrus_sinensis-orange1.1g015632m.g.iprscan.xml"
    orthofinder_path:
    blastp_path:
-   blastx_path: "{{ repo_folder }}/examples/src_data/annotation/v1.0/functional_annotation/Blastx_citrus_sinensis-orange1.1g015632m.g.fasta.0_vs_uniprot_sprot.fasta.out"
+   blastx_path: "{{ data_folder }}/annotation/v1.0/functional_annotation/Blastx_citrus_sinensis-orange1.1g015632m.g.fasta.0_vs_uniprot_sprot.fasta.out"
    genome_version:
    ogs_version:
    blast: 0

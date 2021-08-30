@@ -1,5 +1,5 @@
 ---
 
-repo_folder: /mnt/gga_data
+repo_folder: /mnt/gga_data/gga_load_data
 
 gga_load_data_version : fix_jbrowse_stack_deploy
