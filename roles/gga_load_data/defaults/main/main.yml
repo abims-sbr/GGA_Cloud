@@ -15,5 +15,9 @@ gga_load_data_version: v2.1.0
 config_file: config.yml
 input_sp: input.yml
 
+# For remote server data
+data_url : ""
+data_folder: /opt/gga_data
+
 # Name of the organism for the directory tree structure
 genus_species: genus_species

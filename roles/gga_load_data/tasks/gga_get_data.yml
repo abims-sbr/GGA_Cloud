@@ -1,3 +1,10 @@
+# Import data from remote server
+- name: Get data from url
+  get_url:
+    url: "{{ data_url }}"
+    dest: "{{ data_folder }}"
+  when: data_url != ""
+
 - name: Run gga_get_data script
   command: "python3 {{ gga_get_data }} {{ input_sp }}"
   args:

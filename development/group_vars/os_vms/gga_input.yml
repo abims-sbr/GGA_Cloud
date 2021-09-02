@@ -1,6 +1,6 @@
 ---
 
-data_folder: /mnt/gga_data/test-data
+data_folder: /mnt/gga/test-data
 
 # Name of the organism for the directory tree structure
 genus_species: citrus_sinensis
