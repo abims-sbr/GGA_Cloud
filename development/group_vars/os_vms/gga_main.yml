@@ -2,7 +2,7 @@
 
 repo_folder: /mnt/gga/gga_load_data
 
-data_url : ""
+#data_url : ""
 data_folder: /mnt/gga/test-data
 
-gga_load_data_version : fix_jbrowse_stack_deploy
+gga_load_data_version : https_without_authelia
