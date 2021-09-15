@@ -16,7 +16,7 @@ config_file: config.yml
 input_sp: input.yml
 
 # For remote server data
-data_url : ""
+# data_url : "http://url/to/my/data"
 data_folder: /opt/gga_data
 
 # Name of the organism for the directory tree structure

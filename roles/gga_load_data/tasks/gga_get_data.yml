@@ -3,7 +3,7 @@
   get_url:
     url: "{{ data_url }}"
     dest: "{{ data_folder }}"
-  when: data_url != ""
+  when: data_url is defined
 
 - name: Run gga_get_data script
   command: "python3 {{ gga_get_data }} {{ input_sp }}"
