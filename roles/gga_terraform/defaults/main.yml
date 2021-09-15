@@ -21,9 +21,13 @@ vm_flavor_name: "vm_flavor_name" # The name of the desired flavor for the resour
 vm_key_pair: "" # The name of a key pair to put on the resource. The key pair must already be created and associated with the tenant's (v2) or project's (v3) account.
 vm_security_group: "" # An array of one or more security group names to associate with the server.
 
-vol_name: "volume_name" # A unique name for the volume.
-vol_type: "" # The type of volume to create.
-vol_size: "5" # The size of the volume to create (in gigabytes).
+# To create and attach a volume to the instance
+#vol_name: "volume_name" # A unique volume name.
+#vol_size: "5" # The size of the volume to create (in gigabytes).
+#vol_type: "" # The type of volume to create.
+
+# To attach an existing volume
+#vol_id: "volume_id" # A existing volume id.
 
 # hosts.tmpl template variable
 os_vms_user: "root"

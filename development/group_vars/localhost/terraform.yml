@@ -26,5 +26,6 @@ os_network: genouest-ext
 os_vms_user: debian
 
 vol_name: gga_volume
-vol_type: ISCSI
-vol_size: 20
+vol_id: 6d96a026-a1d9-457d-a40c-8ce003d0de45
+#vol_type: ISCSI
+#vol_size: 20
