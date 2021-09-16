@@ -2,6 +2,7 @@
 
 # terraform directory
 terraform_dir: "{{ playbook_dir }}/terraform" # Where your terraform folder will be build.
+hosts_path: "{{ playbook_dir }}/hosts" # Where the hosts file will be build
 
 # var.tf variables
 os_auth_url: "my_auth_url" # The Identity authentication URL.
@@ -14,7 +15,7 @@ os_network: "" # The name of the network.
 terraform_password: "terraform_password" # The Password to login with.
 
 # resource.tf variables
-vm_name: "vm_name" # A unique name for the resource.
+vm_name: "GGA" # A unique name for the resource.
 vm_image_name: "vm_image_name" # The name of the desired image for the resource. (Required if vm_image_id is empty).
 vm_image_id: "" # The image ID of the desired image for the resource. (Required if vm_image_name is empty).
 vm_flavor_name: "vm_flavor_name" # The name of the desired flavor for the resource.
@@ -27,7 +28,7 @@ vm_security_group: "" # An array of one or more security group names to associat
 #vol_type: "" # The type of volume to create.
 
 # To attach an existing volume
-#vol_id: "volume_id" # A existing volume id.
+#vol_id: "volume_id" # An existing volume id.
 
 # hosts.tmpl template variable
 os_vms_user: "root"
