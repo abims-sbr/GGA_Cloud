@@ -1,28 +1,37 @@
 ---
 
 # terraform directory
-terraform_dir: "{{ playbook_dir }}/terraform"
+terraform_dir: "{{ playbook_dir }}/terraform" # Where your terraform folder will be build.
+hosts_path: "{{ playbook_dir }}/hosts" # Where the hosts file will be build
 
 # var.tf variables
-os_auth_url: "{{ os_auth_url }}"
-os_project_id: "{{ os_project_id }}"
-os_project_name: "{{ os_project_name }}"
-os_user_domain: "{{ os_user_domain }}"
-os_project_domain_id: "{{ os_project_domain_id }}"
-os_user_name: "{{ os_user_name }}"
-tenant_network: "{{ tenant_network }}"
-terraform_password: "{{ terraform_password }}"
+os_auth_url: "my_auth_url" # The Identity authentication URL.
+os_project_id: "" # The ID of the Tenant (v2) or Project (v3).
+os_project_name: "" # The Name of the Tenant (v2) or Project (v3).
+os_user_domain: "" # The domain name where the user is located.
+os_project_domain_id: "" # The domain ID where the project is located.
+os_user_name: "my_user_name" # The Username to login with.
+os_network: "" # The name of the network.
+terraform_password: "terraform_password" # The Password to login with.
 
 # resource.tf variables
-vm_name: "{{ vm_name }}"
-vm_image_name: "{{ vm_image_name }}"
-vm_image_id: "{{ vm_image_id }}"
-vm_flavor_name: "{{ vm_flavor_name }}"
-vm_key_pair: "{{ vm_key_pair }}"
-vm_security_group: "{{ vm_security_group }}"
+vm_name: "GGA" # A unique name for the resource.
+vm_image_name: "vm_image_name" # The name of the desired image for the resource. (Required if vm_image_id is empty).
+vm_image_id: "" # The image ID of the desired image for the resource. (Required if vm_image_name is empty).
+vm_flavor_name: "vm_flavor_name" # The name of the desired flavor for the resource.
+vm_key_pair: "" # The name of a key pair to put on the resource. The key pair must already be created and associated with the tenant's (v2) or project's (v3) account.
+vm_security_group: "" # An array of one or more security group names to associate with the server.
 
-# host template variable
-os_vms_user: debian
+# To create and attach a volume to the instance
+#vol_name: "volume_name" # A unique volume name.
+#vol_size: "5" # The size of the volume to create (in gigabytes).
+#vol_type: "" # The type of volume to create.
 
-# ssh config file
+# To attach an existing volume
+#vol_id: "volume_id" # An existing volume id.
+
+# hosts.tmpl template variable
+os_vms_user: "root"
+
+# ssh_cfg.tmpl file
 ssh_key_path: ~/.ssh/id_rsa.pub

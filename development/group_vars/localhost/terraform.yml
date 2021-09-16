@@ -1,11 +1,5 @@
 ---
-
-vm_name: GGA
-vm_image_name: Debian10
-vm_image_id: f7be72a3-1765-4212-8094-59c442201cb2
-vm_flavor_name: m1.medium
-vm_key_pair: rdallet-sbr
-vm_security_group: default
+hosts_path: "{{ terraform_dir }}"
 
 os_auth_url: https://genostack-api-keystone.genouest.org/v3
 os_hostname: openstack.genouest.org
@@ -14,7 +8,6 @@ os_project_name: rdallet
 os_user_domain: Users
 os_project_domain_id: 0de861d3d0fc43eabf692d6dbb1cc257
 os_user_name: rdallet
-tenant_network: genouest-ext
 
 terraform_password: !vault |
           $ANSIBLE_VAULT;1.1;AES256
@@ -23,3 +16,17 @@ terraform_password: !vault |
           35363261363436643236663363353132326565646261323038303731353834323666633232656466
           3836346566326636320a376164636430666162313132316264636534623761363561346263633231
           3834
+
+vm_name: GGA
+vm_image_name: Debian10
+vm_image_id: f7be72a3-1765-4212-8094-59c442201cb2
+vm_flavor_name: m1.medium
+vm_key_pair: rdallet-sbr
+vm_security_group: default
+os_network: genouest-ext
+os_vms_user: debian
+
+vol_name: gga_volume
+vol_id: 6d96a026-a1d9-457d-a40c-8ce003d0de45
+#vol_type: ISCSI
+#vol_size: 20

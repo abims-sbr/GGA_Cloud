@@ -14,6 +14,27 @@ resource "openstack_compute_instance_v2" "{{ vm_name }}" {
     security_groups = ["{{ vm_security_group }}"]
 
     network {
-        name = var.tenant_network
+        name = "{{ os_network }}"
     }
 }
+
+{% if vol_name is defined and vol_size is defined %}
+resource "openstack_blockstorage_volume_v2" "{{ vol_name }}" {
+  name          = "{{ vol_name }}"
+  volume_type   = "{{ vol_type }}"
+  size          = "{{ vol_size }}"
+}
+resource "openstack_compute_volume_attach_v2" "vol_attach" {
+  instance_id = "${openstack_compute_instance_v2.{{ vm_name }}.id}"
+  volume_id  = "${openstack_blockstorage_volume_v2.{{ vol_name }}.id}"
+}
+{% endif %}
+
+
+{% if vol_id is defined %}
+resource "openstack_compute_volume_attach_v2" "vol_attach" {
+  instance_id = "${openstack_compute_instance_v2.{{ vm_name }}.id}"
+  volume_id  = "{{ vol_id }}"
+}
+{% endif %}
+
