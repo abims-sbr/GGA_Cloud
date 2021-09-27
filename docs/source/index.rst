@@ -1,20 +1,31 @@
-.. gga_cloud documentation master file, created by
-   sphinx-quickstart on Mon Sep 27 10:01:22 2021.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+GGA cloud documentation
+***********************
 
-Welcome to gga_cloud's documentation!
-=====================================
+Galaxy is an open, web-based platform for accessible, reproducible, and transparent computational biomedical research.
+
+For more information on the Galaxy Project, please visit the https://galaxyproject.org
+
+The Galaxy Genome Annotation (GGA) Project is focused on supporting genome annotation inside Galaxy. It consists of several teams, projects, and tool suites that are working closely together to deliver a comprehensive, scalable and easy to use Genome Annotation experience.
+
+For more information on the Galaxy Project, please visit the https://galaxy-genome-annotation.github.io/
+
+
+* :ref:`deployment-docs`
+* :ref:`usage-docs`
+
+.. _deployment-docs:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Deployment
 
+   Deployment <deployment/index>
 
+.. _usage-docs:
 
-Indices and tables
-==================
+.. toctree::
+   :maxdepth: 2
+   :caption: Usage
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   Usage <usage/index>
+
