@@ -1,10 +1,10 @@
 # Installation
 
-## Clone
+## Clone repository from github
 
 `git clone https://github.com/abims-sbr/GGA_Cloud.git`
 
-## Dependencies installation
+## Ansible roles requirements installation
 
 ```
 ansible-galaxy install -r requirements.yml

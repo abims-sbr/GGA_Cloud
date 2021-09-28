@@ -17,7 +17,7 @@ sys.path.append(os.path.abspath('sphinxext'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'gga_cloud'
+project = 'GGA cloud'
 copyright = '2021, ABiMS'
 author = 'ABiMS'
 
