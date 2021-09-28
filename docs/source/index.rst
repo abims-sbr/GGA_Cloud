@@ -28,4 +28,3 @@ For more information on the Galaxy Project, please visit the https://galaxy-geno
    :caption: Usage
 
    Usage <usage/index>
-

@@ -2,7 +2,7 @@ Galaxy Genome Annotation usage
 ==============================
 
 .. toctree::
-    :maxdepth: 2
+   :maxdepth: 2
 
-    get-data
-    tripal-chado
+   get-data
+   tripal-chado
