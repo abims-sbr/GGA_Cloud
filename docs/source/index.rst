@@ -9,18 +9,10 @@ The Galaxy Genome Annotation (GGA) Project is focused on supporting genome annot
 
 For more information on the Galaxy Project, please visit the https://galaxy-genome-annotation.github.io/
 
-
-* :ref:`install-docs`
-* :ref:`gga-docs`
-
-.. _install-docs:
-
 .. toctree::
    :maxdepth: 2
 
    Installation <installation/index>
-
-.. _gga-docs:
 
 .. toctree::
    :maxdepth: 2
