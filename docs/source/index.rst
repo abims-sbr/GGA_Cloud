@@ -19,7 +19,7 @@ For more information on the Galaxy Project, please visit the https://galaxy-geno
    :maxdepth: 2
    :caption: Deployment
 
-   Deployment <deployment/index>
+   <deployment/index>
 
 .. _usage-docs:
 
@@ -27,4 +27,4 @@ For more information on the Galaxy Project, please visit the https://galaxy-geno
    :maxdepth: 2
    :caption: Usage
 
-   Usage <usage/index>
+   <usage/index>
