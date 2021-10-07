@@ -1,6 +1,6 @@
 # Get data from Galaxy histories
 
-Your data are imported into Galaxy histories. 
+By executing the gga_load_data ansible role, your data will be imported into Galaxy histories.
 
 To access it, click on the "Shared data" tab and "Data Librairies". Your data must be in "Project Data".
 
