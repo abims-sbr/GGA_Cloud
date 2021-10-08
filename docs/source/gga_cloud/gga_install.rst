@@ -1,5 +1,5 @@
-GGA install role
-================
+GGA cloud install role
+======================
 
 The gga_install role create directory tree for organisms and deploy stacks for the input organisms as well as Traefik stacks.
 

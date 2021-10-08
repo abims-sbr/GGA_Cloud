@@ -9,18 +9,18 @@ The Galaxy Genome Annotation (GGA) Project is focused on supporting genome annot
 
 For more information on the Galaxy Project, please visit the https://galaxy-genome-annotation.github.io/
 
-GGA cloud is a project initiated by the `Link ABiMS platform <http://abims.sb-roscoff.fr/>`_ as part of the european project `Link EOSC Life <https://www.eosc-life.eu/>`_ which aims to automate the deployment of the GGA environment in a cloud-type infrastructure.
+GGA cloud is a project initiated by the `ABiMS platform <http://abims.sb-roscoff.fr/>`_ as part of the european project `EOSC Life <https://www.eosc-life.eu/>`_ which aims to automate the deployment of the GGA environment in a cloud-type infrastructure.
 
 
 .. toctree::
    :maxdepth: 2
 
-   GGA cloud installation <installation/index>
+   Installation <installation/index>
 
 .. toctree::
    :maxdepth: 2
 
-   GGA cloud <gga_cloud/index>
+   Ansible roles <gga_cloud/index>
 
 .. toctree::
    :maxdepth: 2

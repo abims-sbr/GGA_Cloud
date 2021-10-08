@@ -24,9 +24,12 @@ Ansible roles requirements installation
 ```
 ansible-galaxy install -r requirements.yml
 ```
+
 or to install both separately :
+
 ```
 ansible-galaxy install role -r requirements.yml
+
 ansible-galaxy install collection -r requirements.yml
 ```
 
@@ -41,7 +44,9 @@ Dry mode
 
 ```
 ansible-playbook terraform.yml --check
+
 ansible-playbook gga_install.yml --check
+
 ansible-playbook gga_load_data.yml --check
 ```
 

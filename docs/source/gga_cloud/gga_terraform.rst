@@ -1,5 +1,5 @@
-GGA Terraform role
-==================
+GGA cloud Terraform role
+========================
 
 The terraform role creates a "terraform" folder near to the playbook containing the configuration files of the virtual machine to be deployed.
 
