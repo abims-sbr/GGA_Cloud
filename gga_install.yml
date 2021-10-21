@@ -3,5 +3,7 @@
   pre_tasks:
     - name: Allow release-info to change for APT repositories
       command: apt-get update -y --allow-releaseinfo-change
+    - name: Apt upgrade
+      command: apt-get upgrade -y
   roles:
     - gga_install

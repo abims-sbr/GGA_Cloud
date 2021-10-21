@@ -1,7 +1,7 @@
 ---
 
 # GGA automation scripts repository
-repo_name: http://gitlab.sb-roscoff.fr/abims/e-infra/gga_load_data.git
+repo_name: https://gitlab.sb-roscoff.fr/abims/e-infra/gga_load_data.git
 
 #Remote path where to clone the repository
 repo_folder: /opt/gga_load_data

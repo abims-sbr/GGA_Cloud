@@ -5,4 +5,4 @@
 https://genostack-api-keystone.genouest.org/v3 
 
 [os_vms]
-192.168.100.228 ansible_user=debian ansible_python_interpreter=/usr/bin/python3
+192.168.101.16 ansible_user=debian ansible_python_interpreter=/usr/bin/python3
