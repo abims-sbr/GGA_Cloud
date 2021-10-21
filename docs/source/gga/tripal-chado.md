@@ -73,11 +73,9 @@ Leave the rest unchanged
 
 - Landmark type: contig
 
-- Proteins naming method: Regular expression
+- Proteins naming method: From GFF attribute
 
-- Regex protein capture: `^(.*?)-R([A-Z]+)$` (when mRNA ids are the form GSPECIES000001-RA)
-
-- Regex protein: \1P\2 (to convert protein ids to GSPECIES000001-PA)
+- Protein id attribute: `ID`
 
 - Fasta: the protein sequences
 
