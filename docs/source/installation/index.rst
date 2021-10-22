@@ -18,12 +18,16 @@ Installation
 Clone repository from github
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`git clone https://github.com/abims-sbr/GGA_Cloud.git`
+.. code-block:: bash
+
+  git clone https://github.com/abims-sbr/GGA_Cloud.git
 
 Ansible roles requirements installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`ansible-galaxy install -r requirements.yml`
+.. code-block:: bash
+
+  ansible-galaxy install -r requirements.yml
 
 or to install both separately :
 
