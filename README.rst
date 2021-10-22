@@ -54,14 +54,16 @@ Usage
 Dependencies installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. code:: bash
-   ansible-galaxy install -r requirements.yml 
+.. code-block:: bash
+
+  ansible-galaxy install -r requirements.yml 
 
 or to install both separately :
 
-.. code:: bash
-   ansible-galaxy install role -r requirements.yml 
-   ansible-galaxy install collection -r requirements.yml 
+.. code-block:: bash
+
+  ansible-galaxy install role -r requirements.yml 
+  ansible-galaxy install collection -r requirements.yml 
 
 Need to add `collections_paths = ./collections` in ansible.cfg to use collections.
 
@@ -70,17 +72,18 @@ Run playbooks
 
 **Dry mode**
 
-.. code:: bash
-   ansible-playbook terraform.yml --check
-   ansible-playbook gga_install.yml --check
-   ansible-playbook gga_load_data.yml --check
+.. code-block:: bash
+
+  ansible-playbook terraform.yml --check
+  ansible-playbook gga_install.yml --check
+  ansible-playbook gga_load_data.yml --check
 
 **Real mode**
 
-.. code:: bash
-   ansible-playbook terraform.yml
-   ansible-playbook gga_install.yml
-   ansible-playbook gga_load_data.yml
+.. code-block:: bash
 
+  ansible-playbook terraform.yml
+  ansible-playbook gga_install.yml
+  ansible-playbook gga_load_data.yml
 
 .. image:: https://github.com/abims-sbr/GGA_Cloud/blob/master/static/images/cloud_scheme.png
