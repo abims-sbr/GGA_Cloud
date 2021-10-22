@@ -9,6 +9,8 @@ For the use of Ansible, Python 3 (versions 3.5 and higher) is required. Roles we
 
 Git is also required to clone the [GGA cloud](https://github.com/abims-sbr/GGA_Cloud.git) github repository.
 
+The roles are currently being developed for cloud infrastructures based on Openstack technology. So you need an account on a Openstack cloud.
+
 
 Installation
 ------------
@@ -21,17 +23,15 @@ Clone repository from github
 Ansible roles requirements installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-```
-ansible-galaxy install -r requirements.yml
-```
+`ansible-galaxy install -r requirements.yml`
 
 or to install both separately :
 
-```
-ansible-galaxy install role -r requirements.yml
+.. code-block:: bash
 
-ansible-galaxy install collection -r requirements.yml
-```
+  ansible-galaxy install role -r requirements.yml
+  ansible-galaxy install collection -r requirements.yml
+
 
 Need to add `collections_paths = ./collections` in ansible.cfg to use collections.
 
@@ -42,19 +42,19 @@ Usage
 Dry mode
 ^^^^^^^^
 
-```
-ansible-playbook terraform.yml --check
+.. code-block:: bash
 
-ansible-playbook gga_install.yml --check
+  ansible-playbook terraform.yml --check
+  ansible-playbook gga_install.yml --check
+  ansible-playbook gga_load_data.yml --check
 
-ansible-playbook gga_load_data.yml --check
-```
 
 Real mode
 ^^^^^^^^^
 
-```
-ansible-playbook terraform.yml
-ansible-playbook gga_install.yml
-ansible-playbook gga_load_data.yml
-```
+.. code-block:: bash
+
+  ansible-playbook terraform.yml
+  ansible-playbook gga_install.yml
+  ansible-playbook gga_load_data.yml
+

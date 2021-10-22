@@ -25,7 +25,7 @@ The configuration files created are:
 
 Finally, the role runs terraform to deploy the described virtual machine in the cloud.
 
-### gga_install.yml
+### gga_install
 
 The gga_install role create directory tree for organisms and deploy stacks for the input organisms as well as Traefik stacks.
 
@@ -34,10 +34,10 @@ The gga_install role :
 - clones the [gga_load_data](http://gitlab.sb-roscoff.fr/abims/e-infra/gga_load_data/tree/master) repository and install some python librairies required by GGA.
 - generates a config.yml and input.yml required by gga_load_data scripts and runs gga_init.py scripts that deploy GGA docker stacks.
 
-### gga_load_data.yml
+### gga_load_data
 
 
-## Use
+## Usage
 
 ### Dependencies installation
 
