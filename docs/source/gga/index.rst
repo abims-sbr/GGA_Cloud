@@ -14,3 +14,4 @@ There, you have access to an admin-only galaxy server with tools to populate the
 
    get-data
    tripal-chado
+   jbrowse
