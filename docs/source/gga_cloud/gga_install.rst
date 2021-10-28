@@ -6,8 +6,9 @@ The gga_install role creates directory tree for organisms and deploys stacks for
 The gga_install role :
 
 * installs python requirements.
-* clones the gga_load_data repository and install some python librairies required by GGA.
-* generates a config.yml and input.yml required by gga_load_data scripts and runs gga_init.py scripts that deploy GGA docker stacks.
+* clones the `gga_load_data <https://gitlab.sb-roscoff.fr/abims/e-infra/gga_load_data>`_ repository and install some python librairies required by GGA.
+* generates a config.yml and input.yml required by gga_load_data scripts
+* runs gga_init.py scripts that deploy GGA docker stacks.
 
 
 Role variables
@@ -26,7 +27,7 @@ Host configuration file
 
 Input species variables
 
-The file consists in a "list" of species for which the script will have to create these stacks/load data into galaxy/run workflows
+*The file consists in a "list" of species for which the script will have to create these stacks, load data into galaxy, run workflows*
 
 * **genus_species**: Name of the organism for the directory tree structure
 
@@ -38,12 +39,12 @@ The file consists in a "list" of species for which the script will have to creat
     # Species description, leave blank if unknown or you don't want it to be used
     # These parameters are used to set up the various urls and adresses in different containers
     # The script requires at least the genus to be specified
-    genus: Genus
-    species: species
-    sex: sex
-    strain: strain
-    common_name: common_name
-    origin: origin
+    genus:
+    species:
+    sex:
+    strain:
+    common_name:
+    origin:
 
     # Paths to the different datasets to copy and import into the galaxy container (as a shared library)
     # Must be absolute paths to the dataset

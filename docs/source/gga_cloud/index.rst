@@ -9,7 +9,7 @@ It uses the open-source tool Ansible for software provisioning, configuration ma
 
 - gga_terraform : To deploy a virtual machine in a cloud infrastructure (currently using Openstack technology).
 
-- gga_install : To deploy GGA docker stacks.
+- gga_install : To deploy Galaxy Genome Annotation docker stacks.
 
 - gga_load_data : To import data into the docker Galaxy history.
 
