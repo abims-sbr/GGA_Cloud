@@ -4,10 +4,6 @@ All data loading is done with galaxy, with tools from the Tripal or Chado menu o
 
 For a typical genome, you will do something like this:
 
-*Chado > Chado organism delete*
-
-- Organism: "Homo sapiens"
-
 
 *Chado > Chado organism add*
 
@@ -19,14 +15,15 @@ For a typical genome, you will do something like this:
 
 - Abbr: G. species ("G. species rice" if you load multiple variants)
 
+---
 
 *Chado > Chado analysis add*
 
 - Name: Genus species genome v5.0
 
-- Program: Platanus (if you don't know, write 'Performed by xxx')
+- Program: Assembler program (if you don't know, write 'Performed by xxx')
 
-- Programversion: v3.1.2c, genome v5.0 (if you don't know, write at least 'genome v5.0')
+- Programversion: v1.0.0, genome v5.0 (if you don't know, write at least 'genome v5.0')
 
 - Sourcename: Your lab (or the lab who made the assembly)
 
@@ -34,14 +31,15 @@ For a typical genome, you will do something like this:
 
 You can populate other if you have more infomation (like source version or execution date)
 
+---
 
 *Chado > Chado analysis add*
 
 - Analysis name: Genus species OGS5.0
 
-- Program name: Maker (if you don't know, write 'Performed by xxx')
+- Program name: Annotation program (if you don't know, write 'Performed by xxx')
 
-- Program version: v2.31.8, OGS5.0 (if you don't know, write at least 'OGS5.0')
+- Program version: v1.0.0, OGS5.0 (if you don't know, write at least 'OGS5.0')
 
 - Source name: Your lab (or the lab who made the assembly)
 
@@ -49,6 +47,7 @@ You can populate other if you have more infomation (like source version or execu
 
 You can populate other if you have more infomation (like source version or execution date)
 
+---
 
 *Chado > Chado load fasta to load the genome*
 
@@ -56,12 +55,13 @@ You can populate other if you have more infomation (like source version or execu
 
 - Organism: The organism you created above (if it doesn't appear, wait a few minutes, the list is cached)
 
-- Analysis: The analysis you created above (if it doesn't appear, wait a few minutes, the list is cached)
+- Analysis: The "Genus species genome v5.0" analysis you created above (if it doesn't appear, wait a few minutes, the list is cached)
 
 - Sequence type: contig
 
 Leave the rest unchanged
 
+---
 
 *Chado > Chado load gff*
 
@@ -69,7 +69,7 @@ Leave the rest unchanged
 
 - Organism: The organism you created above (if it doesn't appear, wait a few minutes, the list is cached)
 
-- Analysis: The analysis you created above (if it doesn't appear, wait a few minutes, the list is cached)
+- Analysis: The "Genus species OGS5.0" analysis you created above (if it doesn't appear, wait a few minutes, the list is cached)
 
 - Landmark type: contig
 
@@ -83,6 +83,7 @@ Run this only after the following dataset is ready: the output dataset from prev
 
 Leave the rest unchanged
 
+---
 
 *Tripal > Synchronize features*
 
@@ -94,6 +95,7 @@ Once this job is finished you should be able to access web pages for loaded mRNA
 
 The next step is to load functional annotation.
 
+---
 
 *Tripal > Synchronize an organism*
 
@@ -103,16 +105,19 @@ Once this job is finished you should be able to access web pages for loaded mRNA
 
 The next step is to load functional annotation.
 
+---
 
 *Tripal > Synchronize an analysis*
 
 - Analysis: The genome analysis you created above (if it doesn't appear, wait a few minutes, the list is cached)
 
+---
 
 *Tripal > Synchronize an analysis*
 
 - Analysis: The annotation analysis you created above (if it doesn't appear, wait a few minutes, the list is cached)
 
+---
 
 *Chado > Chado analysis add*
 
@@ -145,6 +150,7 @@ Run this only after the following dataset is ready: the output dataset from prev
 
 You can populate execution date if you know it.
 
+---
 
 *Chado > Chado analysis add*
 
@@ -158,6 +164,7 @@ You can populate execution date if you know it.
 
 - Date Executed: The date of creation of the data (if available)
 
+---
 
 *Chado > Chado load InterProScan results*
 
@@ -174,6 +181,8 @@ Run this only after the following dataset is ready: the output dataset from prev
 You can populate execution date if you know it.
 If you used Blastp:
 
+---
+
 *Chado > Chado analysis add*
 
 - Analysis name: Blastp: on OGS5.0 vs NR
@@ -185,6 +194,8 @@ If you used Blastp:
 - Source name: Your lab
 
 - Date Executed: The date of creation of the data (if available)
+
+---
 
 If you used Diamond:
 
@@ -199,6 +210,8 @@ If you used Diamond:
 - Source name: Your lab
 
 - Date Executed: The date of creation of the data (if available)
+
+---
 
 When using either diamond or blastp:
 
@@ -220,10 +233,13 @@ You can populate execution date if you know it.
 
 For each of the blast2go, blastp/diamond and interproscan analyses:
 
+---
+
 *Tripal > Synchronize an analysis*
 
 - Analysis: The analysis you create above (if it doesn't appear, wait a few minutes, the list is cached)
 
+---
 
 *Tripal > Populate materialized views*
 
@@ -231,6 +247,7 @@ Run this only after the following dataset is ready: the output dataset from prev
 
 Leave the form unchanged
 
+---
 
 *Tripal > Index Tripal data*
 
