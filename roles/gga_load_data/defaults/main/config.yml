@@ -16,14 +16,14 @@ galaxy_default_admin_email: gga@galaxy.org # Required
 galaxy_defaut_admin_user: gga # Required
 galaxy_default_admin_password: password # Required
 galaxy_default_admin_key: mykey # Required
-galaxy_config_remote_user_maildomain: mydomain.com # Required
-galaxy_persist_data: "False" # Required
+galaxy_config_remote_user_maildomain: galaxy.org # Required
+galaxy_persist_data: False # Required
 
 # tripal-specific variables
 tripal_password: tripalpass # Required. Tripal database password (also used by galaxy as an environment variable)
 #tripal_banner_path: /my/path/banner.png # Optional. Custom banner path
-#tripal_theme_name: tripal_gga # Optional. Use this to use another theme
-#tripal_theme_git_clone: http://gitlab.my_tripal_theme.git # Optional. Use this to install another theme.
+tripal_theme_name: gga # Optional. Use this to use another theme
+tripal_theme_git_clone: https://gitlab.sb-roscoff.fr/abims/e-infra/tripal_gga.git # Optional. Use this to install another theme.
 
 # jbrowse-specific variables
 #jbrowse_menu_url: "http://localhost:8888/" # Optional. Used with run_workflow_phaeoexplorer.py: if present, this variable is used to define JBrowse menu_url (to define the template url for the JBrowse feature's link to Tripal), if absent, will use default "https://hostname"

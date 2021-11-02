@@ -17,7 +17,7 @@ galaxy_defaut_admin_user: gga # Required
 galaxy_default_admin_password: password # Required
 galaxy_default_admin_key: mykey # Required
 galaxy_config_remote_user_maildomain: galaxy.org # Required
-galaxy_persist_data: "False" # Required
+galaxy_persist_data: False # Required
 
 # tripal-specific variables
 tripal_password: tripalpass # Required. Tripal database password (also used by galaxy as an environment variable)
