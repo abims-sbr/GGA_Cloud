@@ -133,6 +133,7 @@ The next step is to load functional annotation.
 
 You can populate other if you have more infomation (like source version or execution date)
 
+---
 
 *Chado > Chado load GO annotation*
 
