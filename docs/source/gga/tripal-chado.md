@@ -226,15 +226,15 @@ When using either diamond or blastp:
 
 - Query type: polypeptide
 
-- Database blasted against: Genbank_protein
+- Database blasted against: Select database in the list
 
 Run this only after the following dataset is ready: the output dataset from previous job
 
 You can populate execution date if you know it.
 
-For each of the blast2go, blastp/diamond and interproscan analyses:
-
 ---
+
+For each of the blast2go, blastp/diamond and interproscan analyses:
 
 *Tripal > Synchronize an analysis*
 
