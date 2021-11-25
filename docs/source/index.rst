@@ -26,3 +26,5 @@ GGA cloud is a project initiated by the `ABiMS platform <http://abims.sb-roscoff
    :maxdepth: 2
 
    Galaxy Genome Annotation usage <gga/index>
+
+.. image:: https://github.com/abims-sbr/GGA_Cloud/blob/master/static/images/gga_cloud.png

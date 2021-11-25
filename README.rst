@@ -48,6 +48,10 @@ The gga_install role :
 gga_load_data
 ^^^^^^^^^^^^^
 
+The gga_load_data role, first, generates the directory tree into the organism src_data subfolders and then copies data files into the src_data directory tree.
+
+In a second time, the role creates a “Project Data” library in the Galaxy instance, mirroring the “src_data” folder of the current organism directory tree.
+
 Usage
 -----
 
@@ -86,4 +90,4 @@ Run playbooks
   ansible-playbook gga_install.yml
   ansible-playbook gga_load_data.yml
 
-.. image:: https://github.com/abims-sbr/GGA_Cloud/blob/master/static/images/cloud_scheme.png
+.. image:: https://github.com/abims-sbr/GGA_Cloud/blob/master/static/images/gga_cloud.png
