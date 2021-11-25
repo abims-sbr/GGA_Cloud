@@ -90,4 +90,6 @@ Run playbooks
   ansible-playbook gga_install.yml
   ansible-playbook gga_load_data.yml
 
-.. image:: https://github.com/abims-sbr/GGA_Cloud/blob/master/static/images/gga_cloud.png
+.. figure:: https://github.com/abims-sbr/GGA_Cloud/blob/master/static/images/gga_cloud.png
+
+   *Cuboids represent Docker containers. Hexagon represent a set of Docker container for a species. Black arrows represent HTTP traffic. Blue arrows represent data exchange performed using Galaxy tools. White arrows represent data exchange inherent in applications. Grey arrows represent data/workflow import using Galaxy API.*
