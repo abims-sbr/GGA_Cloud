@@ -236,6 +236,8 @@ You can populate execution date if you know it.
 
 For each of the blast2go, blastp/diamond and interproscan analyses:
 
+---
+
 *Tripal > Synchronize an analysis*
 
 - Analysis: The analysis you create above (if it doesn't appear, wait a few minutes, the list is cached)
