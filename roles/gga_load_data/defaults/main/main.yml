@@ -9,7 +9,8 @@ repo_folder: /opt/gga_load_data
 # Scripts name
 gga_get_data: gga_get_data.py
 gga_load_data: gga_load_data.py
-gga_load_data_version: v2.1.0
+gga_run_workflow: gga_run_workflow_phaeo_jbrowse.py
+gga_load_data_version: v2.4.0
 
 # Config files for GGA scripts
 config_file: config.yml

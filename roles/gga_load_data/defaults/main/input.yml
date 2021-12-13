@@ -27,7 +27,7 @@ input_species:
    # example: "contig_prefix1;contig_prefix2"
    contig_prefix:
    transcripts_path: /path/to/repo/genus_species/src_data/annotation/v1.0/genus_species-annotation.fasta  # Mandatory!
-   proteins_path: # Mandatory!
+   proteins_path: /path/to/repo/genus_species/src_data/annotation/v1.0/genus_species-annotation.g.pep.fasta # Mandatory!
    gff_path: /path/to/repo/genus_species/src_data/annotation/v1.0/genus_species-annotation.gff3 # Mandatory!
    interpro_path: /path/to/repo/genus_species/src_data/annotation/v1.0/functional_annotation/genus_species-functional_annotation.iprscan.xml
    orthofinder_path: 

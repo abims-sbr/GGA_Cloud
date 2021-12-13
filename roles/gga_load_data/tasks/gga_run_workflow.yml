@@ -1,0 +1,4 @@
+- name: Run gga_run_workflow script
+  command: "python3 {{ gga_run_workflow }} {{ input_sp }} --config {{ config_file }} --no-invoke-wf"
+  args:
+    chdir: "{{ repo_folder }}"

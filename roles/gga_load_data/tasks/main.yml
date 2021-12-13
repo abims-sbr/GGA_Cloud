@@ -3,3 +3,6 @@
 
 - name: GGA load data
   include_tasks: gga_load_data.yml
+
+- name: GGA import workflow
+  include_tasks: gga_run_workflow.yml

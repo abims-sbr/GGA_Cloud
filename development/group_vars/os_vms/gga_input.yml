@@ -18,7 +18,7 @@ input_species:
    genome_path: "{{ data_folder }}/genome/v1.0/Citrus_sinensis-scaffold00001.fasta"
    contig_prefix:
    transcripts_path: "{{ data_folder }}/annotation/v1.0/Citrus_sinensis-orange1.1g015632m.g.fasta"
-   proteins_path:
+   proteins_path: "{{ data_folder }}/annotation/v1.0/Citrus_sinensis-orange1.1g015632m.g.pep.fasta"
    gff_path: "{{ data_folder }}/annotation/v1.0/Citrus_sinensis-orange1.1g015632m.g.gff3"
    interpro_path: "{{ data_folder }}/annotation/v1.0/functional_annotation/Citrus_sinensis-orange1.1g015632m.g.iprscan.xml"
    orthofinder_path:

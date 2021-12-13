@@ -5,4 +5,4 @@ repo_folder: /mnt/gga/gga_load_data
 #data_url : ""
 data_folder: /mnt/gga/test-data
 
-gga_load_data_version : v2.2.0
+gga_load_data_version : v2.4.0
