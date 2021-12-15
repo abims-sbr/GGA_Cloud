@@ -1,4 +1,4 @@
 - hosts: localhost
   connection: local
   roles:
-    - gga_terraform
+    - abims-sbr.gga_terraform

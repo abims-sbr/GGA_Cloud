@@ -1,4 +1,4 @@
 - hosts: os_vms
   become: yes
   roles:
-    - gga_load_data
+    - abims-sbr.gga_load_data

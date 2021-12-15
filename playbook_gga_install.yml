@@ -6,4 +6,4 @@
     - name: Apt upgrade
       command: apt-get upgrade -y
   roles:
-    - gga_install
+    - abims-sbr.gga_install
