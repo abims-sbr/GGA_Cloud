@@ -1,8 +1,5 @@
 ---
 
-# Name of the organism for the directory tree structure
-genus_species: genus_species
-
 # Input file for the automated creation GGA docker stacks
 # The file consists in a "list" of species for which the script will have to create these stacks/load data into galaxy/run workflows
 

@@ -1,10 +1,5 @@
 ---
 
-data_folder: /mnt/gga/test-data
-
-# Name of the organism for the directory tree structure
-genus_species: citrus_sinensis
-
 # Species configuration variables
 input_species:
  - name : "{{ genus_species }}"
