@@ -31,7 +31,7 @@ Input species variables
 
 * **genus_species**: Name of the organism for the directory tree structure
 
-* **input_species**:
+* **input_species**: *At least genus and species must be filled for gga_init.py script*
 
 .. code-block:: bash
 
