@@ -16,6 +16,9 @@ Role variables
 
 Not all variables are listed or explained in detail. For additional information about less commonly used variables, see the defaults file.
 
+Check also the github repository at https://github.com/abims-sbr/GGA_Cloud/tree/master/roles/abims-sbr.gga_install
+
+
 Required variables
 ^^^^^^^^^^^^^^^^^^
 
