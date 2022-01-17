@@ -11,6 +11,8 @@ For more information on the Galaxy Genome Annotation project, please visit the h
 
 GGA cloud is a project initiated by the `ABiMS platform <http://abims.sb-roscoff.fr/>`_ as part of the european project `EOSC Life <https://www.eosc-life.eu/>`_ which aims to automate the deployment of the GGA environment in a cloud-type infrastructure.
 
+Find the github repository at https://github.com/abims-sbr/GGA_Cloud
+
 
 .. toctree::
    :maxdepth: 2

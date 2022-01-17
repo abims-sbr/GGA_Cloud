@@ -24,7 +24,7 @@ Required variables
 Cloud configurations variables :
 
 * **os_auth_url**: The Identity authentication URL.
-* **os_hostname**: The cloud hostname.
+* **os_hostname**: 
 * **os_project_id**: The ID of the Tenant (v2) or Project (v3).
 * **os_project_name**: The Name of the Tenant (v2) or Project (v3).
 * **os_user_domain**: The domain name where the user is located.
@@ -56,3 +56,22 @@ You can also :
 
 	* **vol_name**: A unique volume name.
 	* **vol_id**: An existing volume id.
+
+
+Usage
+-----
+
+Dry mode
+^^^^^^^^
+
+.. code-block:: bash
+
+  ansible-playbook playbook_gga_terraform.yml --check
+
+
+Real mode
+^^^^^^^^^
+
+.. code-block:: bash
+
+  ansible-playbook playbook_gga_terraform.yml

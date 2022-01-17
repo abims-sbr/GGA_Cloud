@@ -31,7 +31,7 @@ Input species variables
 
 * **genus_species**: Name of the organism for the directory tree structure
 
-* **input_species**: *At least genus and species must be filled for gga_init.py script*
+* **input_species**:
 
 .. code-block:: bash
 
@@ -57,3 +57,22 @@ Input species variables
     orthofinder_path: 
     blastp_path: 
     blastx_path:
+
+
+Usage
+-----
+
+Dry mode
+^^^^^^^^
+
+.. code-block:: bash
+
+  ansible-playbook playbook_gga_install.yml --check
+
+
+Real mode
+^^^^^^^^^
+
+.. code-block:: bash
+
+  ansible-playbook playbook_gga_install.yml

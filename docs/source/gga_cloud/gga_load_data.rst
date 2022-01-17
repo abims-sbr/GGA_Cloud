@@ -23,3 +23,22 @@ To import data from remote server :
 
 * **data_folder**: Path where to copy data files
 * **data_url**: URL of the data
+
+
+Usage
+-----
+
+Dry mode
+^^^^^^^^
+
+.. code-block:: bash
+
+  ansible-playbook playbook_gga_load_data.yml --check
+
+
+Real mode
+^^^^^^^^^
+
+.. code-block:: bash
+
+  ansible-playbook playbook_gga_load_data.yml

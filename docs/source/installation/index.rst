@@ -4,11 +4,16 @@ Galaxy Genome Annotation Cloud installation & usage
 Requirements
 ------------
 
-For the use of Ansible, Python 3 (versions 3.5 and higher) is required. Roles were developped under Ansible-core (>= 2.11) & Ansible (>= 4.0.0).
+For the use of Ansible playbooks, Ubuntu 18.04 or higher is required.
+
+Python 3 (versions 3.5 and higher) is required. Roles were developped under Ansible-core (>= 2.11) & Ansible (>= 4.0.0).
 
 Git is also required to clone the `GGA cloud <https://github.com/abims-sbr/GGA_Cloud.git>`_ github repository.
 
 The roles are currently being developed for cloud infrastructures based on Openstack technology. So you need an account on a Openstack cloud.
+
+
+For smoother use of GGA, a 20GB size virtual machine with 16GB RAM is recommended.
 
 
 Installation
@@ -37,27 +42,3 @@ or to install both separately :
 
 
 Need to add `collections_paths = ./collections` in ansible.cfg to use collections.
-
-
-Usage
------
-
-Dry mode
-^^^^^^^^
-
-.. code-block:: bash
-
-  ansible-playbook terraform.yml --check
-  ansible-playbook gga_install.yml --check
-  ansible-playbook gga_load_data.yml --check
-
-
-Real mode
-^^^^^^^^^
-
-.. code-block:: bash
-
-  ansible-playbook terraform.yml
-  ansible-playbook gga_install.yml
-  ansible-playbook gga_load_data.yml
-
