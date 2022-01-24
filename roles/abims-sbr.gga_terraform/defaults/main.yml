@@ -12,7 +12,7 @@ os_user_domain_name: "" # The domain name where the user is located.
 os_project_domain_id: "" # The domain ID where the project is located.
 os_user_name: "my_user_name" # The Username to login with.
 os_network: "" # The name of the network.
-terraform_password: "terraform_password" # The Password to login with.
+os_password: "os_password" # The Password used to log in to your cloud account.
 
 # resource.tf variables
 vm_name: "GGA" # A unique name for the resource.

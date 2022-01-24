@@ -44,7 +44,7 @@ Cloud configurations variables :
 * **os_project_domain_id**: The domain ID where the project is located.
 * **os_user_name**: The Username to login with.
 * **os_network**: The name of the network.
-* **terraform_password**: The Password to login with
+* **os_password**: The Password used to log in to your cloud account.
 
 Virtual Machine variables :
 
