@@ -11,6 +11,12 @@ The gga_install role :
 * runs gga_init.py scripts that deploy GGA docker stacks.
 
 
+Requirements
+------------
+
+Before to run this playbook, make sure to have a hosts and ssh.cfg files in the playbook repository. If you have execute the GGA cloud terraform role before, they are in the `terraform/` folder.
+
+
 Role variables
 --------------
 

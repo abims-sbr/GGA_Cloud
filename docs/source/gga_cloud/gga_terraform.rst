@@ -21,6 +21,36 @@ Requirements
 This role is performed locally (on your local host) and need an Openstack account to be executed.
 
 
+Good to know
+------------
+
+After running this playbook. You may have to run the following command into the virtual machine to update it :
+
+.. code-block:: bash
+
+  apt-get update -y --allow-releaseinfo-change
+  apt-get upgrade -y
+
+---
+
+In case of using a storage volume, you must currently also mount it. If this is the first time using this volume, you need to create a file system on it. To check if there is already one, using this command:
+
+.. code-block:: bash
+
+  lsblk -f
+
+If there are none, you need to create it:
+
+.. code-block:: bash
+
+  mkfs.ext4 /dev/vdb
+
+You can then mount the volume anywhere you wish.
+
+mkdir /mnt/myfolder
+mount /dev/vdb /mnt/myfolder
+
+
 Role variables
 --------------
 
