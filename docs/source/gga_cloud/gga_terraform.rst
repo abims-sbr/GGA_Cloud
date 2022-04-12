@@ -31,7 +31,7 @@ After running this playbook. You may have to run the following command into the 
   apt-get update -y --allow-releaseinfo-change
   apt-get upgrade -y
 
----
+------
 
 In case of using a storage volume, you must currently also mount it. If this is the first time using this volume, you need to create a file system on it. To check if there is already one, using this command:
 

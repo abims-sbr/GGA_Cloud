@@ -18,13 +18,15 @@ variable "os_project_domain_id" {
     description = "The project domain ID."    
     default = "{{ os_project_domain_id }}"
 }
-variable "os_user_name" {
+variable "os_username" {
     description = "The username for the Tenant."
-    default = "{{ os_user_name }}"
+    type = string
+    sensitive = true
 }
 variable "os_password" {
     description = "The user password"
-    default = "{{ os_password }}"
+    type = string
+    sensitive = true
 }
 variable "os_network" {    
     description = "The network to be used."    

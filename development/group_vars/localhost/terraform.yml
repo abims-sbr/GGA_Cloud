@@ -7,8 +7,8 @@ os_project_id: d84c93cbdb4e4b0a8a91ecdc4e7254f4
 os_project_name: rdallet
 os_user_domain_name: Users
 os_project_domain_id: 0de861d3d0fc43eabf692d6dbb1cc257
-os_user_name: rdallet
 
+os_username: rdallet
 os_password: !vault |
           $ANSIBLE_VAULT;1.1;AES256
           36643331613138663263623032396137333635373734383862306464366336393439643362326364
@@ -26,7 +26,7 @@ vm_security_group: default
 os_network: genouest-ext
 os_vms_user: debian
 
-vol_name: gga_volume
-vol_id: 6d96a026-a1d9-457d-a40c-8ce003d0de45
+#vol_name: gga_volume
+#vol_id: 6d96a026-a1d9-457d-a40c-8ce003d0de45
 #vol_type: ISCSI
 #vol_size: 20

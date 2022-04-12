@@ -14,7 +14,7 @@ resource "openstack_compute_instance_v2" "{{ vm_name }}" {
     security_groups = ["{{ vm_security_group }}"]
 
     network {
-        name = "{{ os_network }}"
+        name = var.os_network
     }
 }
 

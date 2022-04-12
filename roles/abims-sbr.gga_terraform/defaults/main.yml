@@ -5,14 +5,14 @@ terraform_dir: "{{ playbook_dir }}/terraform" # Where your terraform folder will
 hosts_path: "{{ playbook_dir }}/hosts" # Where the hosts file will be build
 
 # var.tf variables
-os_auth_url: "my_auth_url" # The Identity authentication URL.
+os_auth_url: "" # The Identity authentication URL.
 os_project_id: "" # The ID of the Tenant (v2) or Project (v3).
 os_project_name: "" # The Name of the Tenant (v2) or Project (v3).
 os_user_domain_name: "" # The domain name where the user is located.
 os_project_domain_id: "" # The domain ID where the project is located.
-os_user_name: "my_user_name" # The Username to login with.
+os_username: "" # The Username to login with.
+os_password: "" # The Password used to log in to your cloud account.
 os_network: "" # The name of the network.
-os_password: "os_password" # The Password used to log in to your cloud account.
 
 # resource.tf variables
 vm_name: "GGA" # A unique name for the resource.
