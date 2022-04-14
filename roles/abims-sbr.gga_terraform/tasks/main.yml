@@ -33,3 +33,17 @@
   community.general.terraform: 
     project_path: "{{ terraform_dir }}"
     force_init: yes
+
+# Copy hosts and ssh configuration files in playbook directory
+- name: Copy hosts file in playbook directory
+  ansible.builtin.copy:
+    src: "{{ terraform_dir }}/hosts"
+    dest: "{{ playbook_dir }}"
+    backup: yes
+
+- name: Copy hosts file in playbook directory
+  ansible.builtin.copy:
+    src: "{{ terraform_dir }}/ssh.cfg"
+    dest: "{{ playbook_dir }}"
+    backup : yes
+

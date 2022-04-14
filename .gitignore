@@ -3,4 +3,5 @@ roles/geerlingguy.git
 roles/geerlingguy.docker
 collections/
 terraform/
+hosts
 ssh.cfg

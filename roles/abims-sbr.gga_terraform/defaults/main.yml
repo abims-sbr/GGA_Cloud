@@ -2,7 +2,6 @@
 
 # terraform directory
 terraform_dir: "{{ playbook_dir }}/terraform" # Where your terraform folder will be build.
-hosts_path: "{{ playbook_dir }}/hosts" # Where the hosts file will be build
 
 # var.tf variables
 os_auth_url: "" # The Identity authentication URL.

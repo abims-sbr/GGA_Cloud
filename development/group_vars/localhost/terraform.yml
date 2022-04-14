@@ -1,5 +1,4 @@
 ---
-hosts_path: "{{ terraform_dir }}"
 
 os_auth_url: https://genostack-api-keystone.genouest.org/v3
 os_hostname: openstack.genouest.org
