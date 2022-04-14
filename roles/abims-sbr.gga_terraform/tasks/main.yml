@@ -38,7 +38,7 @@
 - name: Copy hosts file in playbook directory
   ansible.builtin.copy:
     src: "{{ terraform_dir }}/hosts"
-    dest: "{{ playbook_dir }}"
+    dest: "{{ playbook_dir }}/{{ hosts_path }}"
     backup: yes
 
 - name: Copy hosts file in playbook directory
