@@ -32,6 +32,9 @@
 - name: Run terraform
   community.general.terraform: 
     project_path: "{{ terraform_dir }}"
+    variables:
+        os_username: "{{ os_username }}"
+        os_password: "{{ os_password }}"
     force_init: yes
 
 # Copy hosts and ssh configuration files in playbook directory
