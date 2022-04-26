@@ -33,3 +33,11 @@ Find the github repository at https://github.com/abims-sbr/GGA_Cloud
 .. figure:: https://raw.githubusercontent.com/abims-sbr/GGA_Cloud/master/static/images/gga_cloud.png
 
    *Cuboids represent Docker containers. Hexagon represent a set of Docker container for a species. Black arrows represent HTTP traffic. Blue arrows represent data exchange performed using Galaxy tools. White arrows represent data exchange inherent in applications. Grey arrows represent data/workflow import using Galaxy API.*
+
+.. image:: https://github.com/abims-sbr/GGA_Cloud/blob/master/static/images/eosclogo.png
+   :align: left
+
+This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 824087.
+
+.. image:: https://github.com/abims-sbr/GGA_Cloud/blob/master/static/images/eu_flag.jpg
+   :align: right

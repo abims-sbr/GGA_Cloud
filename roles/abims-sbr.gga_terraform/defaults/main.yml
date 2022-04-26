@@ -3,7 +3,12 @@
 # terraform directory
 terraform_dir: "{{ playbook_dir }}/terraform" # Where your terraform folder will be build.
 
-# var.tf variables
+# ssh_cfg.tmpl file
+ssh_key_path: ~/.ssh/id_rsa.pub
+
+# Openstack (os)
+
+## var.tf variables
 os_auth_url: "" # The Identity authentication URL.
 os_project_id: "" # The ID of the Tenant (v2) or Project (v3).
 os_project_name: "" # The Name of the Tenant (v2) or Project (v3).
@@ -13,7 +18,7 @@ os_username: "" # The Username to login with.
 os_password: "" # The Password used to log in to your cloud account.
 os_network: "" # The name of the network.
 
-# resource.tf variables
+## resource.tf variables
 vm_name: "GGA" # A unique name for the resource.
 vm_image_name: "vm_image_name" # The name of the desired image for the resource. (Required if vm_image_id is empty).
 vm_image_id: "" # The image ID of the desired image for the resource. (Required if vm_image_name is empty).
@@ -31,6 +36,3 @@ vm_security_group: "" # An array of one or more security group names to associat
 
 # hosts.tmpl template variable
 os_vms_user: "root"
-
-# ssh_cfg.tmpl file
-ssh_key_path: ~/.ssh/id_rsa.pub
