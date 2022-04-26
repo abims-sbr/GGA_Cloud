@@ -4,8 +4,7 @@ GGA cloud Terraform role
 The terraform role creates a "terraform" folder, in the playbook directory, containing the configuration files describing the virtual machine to be deployed. 
 It also creates the "hosts" and "ssh.cfg" files that allow you to connect to the virtual machine deployed in order to run the following playbooks.
 
-Role steps
-^^^^^^^^^^
+Role steps :
 
 * Create a terraform folder in the playbook directory
 
