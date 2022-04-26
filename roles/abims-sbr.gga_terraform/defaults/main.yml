@@ -4,12 +4,14 @@
 terraform_dir: "{{ playbook_dir }}/terraform" # Where your terraform folder will be build.
 
 # ssh_cfg.tmpl file
-ssh_key_path: ~/.ssh/id_rsa.pub
+local_ssh_key_path: ~/.ssh/id_rsa.pub
+remote_ssh_key_path: ~/.ssh/id_rsa.pub
 
 # Openstack (os)
 
 ## var.tf variables
 os_auth_url: "" # The Identity authentication URL.
+os_hostname: "" # The cloud hostname
 os_project_id: "" # The ID of the Tenant (v2) or Project (v3).
 os_project_name: "" # The Name of the Tenant (v2) or Project (v3).
 os_user_domain_name: "" # The domain name where the user is located.
@@ -26,6 +28,9 @@ vm_flavor_name: "vm_flavor_name" # The name of the desired flavor for the resour
 vm_key_pair: "" # The name of a key pair to put on the resource. The key pair must already be created and associated with the tenant's (v2) or project's (v3) account.
 vm_security_group: "" # An array of one or more security group names to associate with the server.
 
+# hosts.tmpl template variable
+os_vms_user: "root"
+
 # To create and attach a volume to the instance
 #vol_name: "volume_name" # A unique volume name.
 #vol_size: "5" # The size of the volume to create (in gigabytes).
@@ -33,6 +38,3 @@ vm_security_group: "" # An array of one or more security group names to associat
 
 # To attach an existing volume
 #vol_id: "volume_id" # An existing volume id.
-
-# hosts.tmpl template variable
-os_vms_user: "root"

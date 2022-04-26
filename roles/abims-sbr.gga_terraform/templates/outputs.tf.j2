@@ -15,7 +15,8 @@ resource "local_file" "SSHconfig" {
  {
   os_hostname = "{{ os_hostname }}",
   os_cloud_user = var.os_username,
-  identity_file = "{{ ssh_key_path }}",
+  local_key_path = "{{ local_ssh_key_path }}",
+  remote_key_path = "{{ remote_ssh_key_path }}",
   os_vms_ip = openstack_compute_instance_v2.{{ vm_name }}.access_ip_v4
   os_vms_user = "{{ os_vms_user }}"
  }

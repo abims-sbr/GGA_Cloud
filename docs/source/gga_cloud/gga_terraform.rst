@@ -1,54 +1,32 @@
 GGA cloud Terraform role
 ========================
 
-The terraform role creates a "terraform" folder, in the playbook directory, containing the configuration files describing the virtual machine to be deployed.
+The terraform role creates a "terraform" folder, in the playbook directory, containing the configuration files describing the virtual machine to be deployed. 
+It also creates the "hosts" and "ssh.cfg" files that allow you to connect to the virtual machine deployed in order to run the following playbooks.
 
-The configuration files created are:
+Role steps
+^^^^^^^^^^
 
-* a providers.tf file describing the cloud provider.
-* a resource.tf file describing the virtual machine to be deployed.
-* a var.tf file gathering the different variables used.
-* a outputs.tf file describing the hosts and ssh_cfg files to generate.
+* Create a terraform folder in the playbook directory
 
-Finally, the role runs terraform to deploy the described virtual machine in the cloud.
+* Create the following files into the terraform folder
 
-** The role also create a new host file in the "terraform" folder (by default). Don't forget to change your host file before running next roles. **
+	* a providers.tf file describing the cloud provider.
+	* a resource.tf file describing the virtual machine to be deployed.
+	* a var.tf file gathering the different variables used.
+	* a outputs.tf file describing the hosts and ssh_cfg files to generate.
+	* an ansible inventory file called hosts
+	* a ssh.cfg file setting up the SSH bastion
+
+* Run terraform to deploy the described virtual machine in the cloud.
+
+* Copy the hosts and ssh.cfg file in the correct directory and create their backup files.
 
 
 Requirements
 ------------
 
 This role is performed locally (on your local host) and need an Openstack account to be executed.
-
-
-Good to know
-------------
-
-After running this playbook. You may have to run the following command into the virtual machine to update it :
-
-.. code-block:: bash
-
-  apt-get update -y --allow-releaseinfo-change
-  apt-get upgrade -y
-
-------
-
-In case of using a storage volume, you must currently also mount it. If this is the first time using this volume, you need to create a file system on it. To check if there is already one, using this command:
-
-.. code-block:: bash
-
-  lsblk -f
-
-If there are none, you need to create it:
-
-.. code-block:: bash
-
-  mkfs.ext4 /dev/vdb
-
-You can then mount the volume anywhere you wish.
-
-mkdir /mnt/myfolder
-mount /dev/vdb /mnt/myfolder
 
 
 Role variables
@@ -67,14 +45,14 @@ Required variables
 Cloud configurations variables :
 
 * **os_auth_url**: The Identity authentication URL.
-* **os_hostname**: 
+* **os_hostname**: The cloud hostname.
 * **os_project_id**: The ID of the Tenant (v2) or Project (v3).
 * **os_project_name**: The Name of the Tenant (v2) or Project (v3).
 * **os_user_domain_name**: The domain name where the user is located.
 * **os_project_domain_id**: The domain ID where the project is located.
 * **os_user_name**: The Username to login with.
-* **os_network**: The name of the network.
 * **os_password**: The Password used to log in to your cloud account.
+* **os_network**: The name of the network.
 
 Virtual Machine variables :
 
@@ -147,3 +125,33 @@ Real mode
 .. code-block:: bash
 
   ansible-playbook playbook_gga_terraform.yml
+
+
+Troubleshooting
+---------------
+
+After running this playbook. You may have to run the following command into the virtual machine to update some librairies :
+
+.. code-block:: bash
+
+  apt-get update -y --allow-releaseinfo-change
+  apt-get upgrade -y
+
+------
+
+In case of using a storage volume, you must currently also mount it. If this is the first time using this volume, you need to create a file system on it. To check if there is already one, using this command:
+
+.. code-block:: bash
+
+  lsblk -f
+
+If there are none, you need to create it:
+
+.. code-block:: bash
+
+  mkfs.ext4 /dev/vdb
+
+You can then mount the volume anywhere you wish.
+
+mkdir /mnt/myfolder
+mount /dev/vdb /mnt/myfolder

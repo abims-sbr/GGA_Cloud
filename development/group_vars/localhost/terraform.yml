@@ -1,7 +1,5 @@
 ---
 
-hosts_path: development/hosts
-
 os_auth_url: https://genostack-api-keystone.genouest.org/v3
 os_hostname: openstack.genouest.org
 os_project_id: d84c93cbdb4e4b0a8a91ecdc4e7254f4

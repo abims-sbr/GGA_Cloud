@@ -38,13 +38,13 @@
     force_init: yes
 
 # Copy hosts and ssh configuration files in playbook directory
-- name: Copy hosts file in playbook directory
+- name: Copy hosts file in inventory directory
   ansible.builtin.copy:
     src: "{{ terraform_dir }}/hosts"
-    dest: "{{ playbook_dir }}/{{ hosts_path }}"
+    dest: "{{ inventory_dir }}"
     backup: yes
 
-- name: Copy hosts file in playbook directory
+- name: Copy ssh.cfg file in playbook directory
   ansible.builtin.copy:
     src: "{{ terraform_dir }}/ssh.cfg"
     dest: "{{ playbook_dir }}"

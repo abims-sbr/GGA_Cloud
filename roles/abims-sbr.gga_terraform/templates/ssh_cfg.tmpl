@@ -2,7 +2,7 @@
 Host os_cloud
  Hostname ${os_hostname}
  User ${os_cloud_user}
- IdentityFile ${identity_file}
+ IdentityFile ${local_key_path}
 
 # For all machines in the private zone:
 # You can enter a range of IPs or a dns zone, for example:
@@ -11,7 +11,7 @@ Host ${os_vms_ip}
 # Proxify the connection through the bastion.
  ProxyCommand ssh os_cloud -F ssh.cfg -W %h:22
  User ${os_vms_user}
- IdentityFile ${identity_file}
+ IdentityFile ${remote_key_path}
 
 # SSH multiplexing directives
 Host *
