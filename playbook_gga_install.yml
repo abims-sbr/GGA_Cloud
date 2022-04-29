@@ -1,9 +1,13 @@
 - hosts: os_vms
   become: yes
   pre_tasks:
+    # Update and upgrade librairies
     - name: Allow release-info to change for APT repositories
-      command: apt-get update -y --allow-releaseinfo-change
+      apt:
+        update_cache: yes
+        #allow_releaseinfo_change: True
     - name: Apt upgrade
-      command: apt-get upgrade -y
+      apt:
+        upgrade: safe
   roles:
     - abims-sbr.gga_install

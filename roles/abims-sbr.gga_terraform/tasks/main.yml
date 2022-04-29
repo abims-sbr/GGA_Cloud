@@ -49,4 +49,3 @@
     src: "{{ terraform_dir }}/ssh.cfg"
     dest: "{{ playbook_dir }}"
     backup : yes
-

@@ -1,0 +1,5 @@
+---
+
+mount_src : /dev/vdb
+mount_path : /mnt/gga
+

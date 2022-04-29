@@ -1,0 +1,5 @@
+---
+
+# Mount
+#mount_src : /dev/vdb # The path to your volume
+#mount_path : /mnt # The mount path

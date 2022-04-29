@@ -2,3 +2,33 @@
   connection: local
   roles:
     - abims-sbr.gga_terraform
+  post_tasks:
+    - name: Wait until the string "os_vms" is in the hosts file
+      wait_for:
+        path: "{{ inventory_file }}"
+        search_regex: os_vms
+
+- hosts: os_vms
+  become: yes
+  tasks:
+    # Mount the volume
+    - name: Create file system
+      community.general.filesystem:
+        fstype: ext4
+        dev: "{{ mount_src }}"
+      when: mount_path is defined
+
+    - name: Create a directory if it does not exist
+      ansible.builtin.file:
+        path: "{{ mount_path }}"
+        state: directory
+        mode: '0755'
+      when: mount_path is defined
+
+    - name: Mount File System
+      mount:
+        path: "{{ mount_path }}"
+        src: "{{ mount_src }}"
+        fstype: ext4
+        state: mounted
+      when: mount_path is defined
